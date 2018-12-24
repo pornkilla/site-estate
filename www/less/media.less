@@ -1,0 +1,122 @@
+// out: false
+
+@import "lesshat";
+
+//*** Screen 480+
+@media (min-width: 30em) {}
+
+//*** Screen 768+
+@media (min-width: 48em) {
+    header {        
+        .head-top {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            .call,
+            .social-icons {
+                .visible;
+            }
+            .call {        
+                .flex(2);    
+                width: 620px;            
+                background-image: url('../images/bg_header-call.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                button {
+                    background-image: url('../images/button_header-call.png');
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    .size(200px,40px);
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-indent: -9000px;
+                    text-transform: capitalize;
+                }
+            }
+            .burger,
+            .social-icons {
+                .flex(1);
+            }
+            .mobile-phones {
+                .flex(0);
+                .hidden;
+            }
+        }
+        .head-main {
+            height: 100px;
+            padding-left: 10px;
+            padding-right: 10px;   
+            line-height: 1.4;
+            padding-bottom: 10px;
+            .align-items(flex-end);
+            .phones,
+            .adress {
+                .visible;            
+            }
+            .adress {
+                text-align: right;
+                font-size: 0.75rem;
+                strong {
+                    font-size: 0.875rem;
+                }
+            }
+            .phones {
+                text-align: center;
+                .order(2);
+                .flex(2);
+                span {
+                    font-size: 0.75rem;
+                }
+            }
+            a {
+                color: inherit;
+            }
+        }        
+        .logo {
+            .order(1);
+            .flex(1);
+            .size(228px,82px);
+            background-image: url('../images/logo-horisontal.svg');
+            background-position-x: left;
+        }
+    }
+}
+
+//*** Screen 960+
+@media (min-width: 60em) {
+   header {
+        .burger {
+            .hidden;
+        }        
+        .head-nav {            
+            display: block;
+            margin: 0 auto;
+            max-width: 1120px;
+            text-align: center;        
+            ul {                
+                .flex;
+                .spread;
+            }
+            a {
+                padding-top: 22px;
+                padding-bottom: 22px;
+            }
+        }
+   }
+}
+
+//*** Screen 1280+
+@media (min-width: 80em) {
+    header {
+        .head-nav {
+            max-width: 80%;
+        }
+        .head-main {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+    }
+}
+
+//*** Screen 1920+
+@media (min-width: 120em) {}
