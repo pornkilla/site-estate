@@ -8,7 +8,7 @@
 
         function mobileMenuInAction() {
 			$('body').toggleClass('menu-open');
-			menuBox.slideToggle(300, 'swing');
+			menuBox.slideToggle(500, 'swing');
         }
         
         // Resize cleanup

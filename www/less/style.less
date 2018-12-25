@@ -32,7 +32,7 @@
 }
 
 /*========== Flexy flex elements ==========*/
-.flex {
+.flexy {
     .display(flex);
 }
 .nowrap {
@@ -88,6 +88,8 @@ body {
     font-size: 16px;
     font-weight: 200;
     min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     .bg-smoky;
     .normal {
         display: block;
@@ -164,14 +166,16 @@ button, .button {
     -webkit-tap-highlight-color: transparent;
     will-change: '';
     -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
-   box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+    box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
     transition: 
         opacity .1s ease,
         background-color .1s ease,
         color .1s ease,
         box-shadow .1s ease,
         background .1s ease;
-
+    &.clear {
+        background-color: transparent;
+    }
 }
 strong {
     font-weight: 800;
@@ -289,8 +293,9 @@ header {
         a {
             color: @nero;
             padding: 12px 10px;
-            display: inline-block;
-            &::first-letter {
+            .display(flex);
+            .justify-content(space-between);
+            span::first-letter {
                 text-transform: capitalize;
             }
         }
@@ -302,6 +307,113 @@ header {
         background-image: url('../images/logo-vertical.svg');
         background-position: center center;
         background-repeat: no-repeat;
+    }
+    .head-teaser {
+        position: relative;
+        overflow: hidden;
+        height: 300px;
+        z-index: 1;
+        background-image: url('../images/bg_header-small.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        .circle, .pic {
+            position: absolute;        
+        }
+        .circle {
+            left: -120px;
+            bottom: -120px;
+            z-index: 2;
+            .border-radius(50%);
+            .size(310px,310px);
+            background-color: #ffffff;
+        } 
+        .pic {
+            left: -70px;
+            bottom: 60px;
+            z-index: 3;
+            .size(310px,185px);
+            background-image: url('../images/pic_header-plan-medium.png');
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto 185px;
+        }
+        .text {
+            width: 45%;
+            padding-top: 15px;
+            margin-left: auto;
+            margin-right: 5%;
+            text-align: right;
+            text-transform: uppercase;
+        }
+        .small {
+            font-size: 0.875rem;
+        }
+        .accent {
+            line-height: 1.1;
+            font-size: 2rem;
+            font-family: 'Appetite';
+            color: @gunmetal;
+            margin-bottom: 0.5rem;
+            em {
+                color: @smoky;
+            }
+        }
+    }
+    .head-search { 
+        z-index: 2;
+        position: relative;   
+        .selector {
+            margin-top: -50px;
+            color: @smoky;
+            position: relative;
+            background-color: rgba(43, 48, 58, 0.85);
+            li {
+              .flexy; 
+              .v-centered;
+              &.active {
+                padding: 13px 20px;
+              }
+              &:not(.active) {
+                  .hidden;
+              }
+            }
+            .toggle {
+                position: absolute;
+                top: 0;
+                right: 4px;
+                bottom: 0;
+                margin: auto;
+                font-size: 1.25rem;
+                line-height: 30px;
+                color: inherit;
+                padding: 0.5rem 1.125rem;
+            }
+        }
+        .name {
+            font-size: 1rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .icon {            
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-family: 'Fontello';
+            font-style: normal;
+            font-weight: normal;
+            speak: none;
+            display: inline-block;
+            width: 1em;
+            margin-right: .4em;
+            text-align: center;
+            font-variant: normal;
+            text-transform: none;            
+        }
+        .flats {
+            &::before {
+                content: '\e824';    
+            }
+        }
     }    
 }
 
