@@ -11,24 +11,29 @@
 
 /* =Colors= */
 .bg-white {
+    color: @gunmetal;
     background-color: #ffffff;
 }
 .bg-red {
     background-color: @red;
 }
 .bg-yellow {
+    color: @nero;
     background-color: @yellow;
 }
 .bg-gunmetal {
+    color: @hose;
     background-color: @gunmetal;
 }
 .bg-nero {
     background-color: @nero;
 }
 .bg-hose {
+    color: @nero;
     background-color: @hose;
 }
 .bg-smoky {
+    color: @gunmetal;
     background-color: @smoky;
 }
 
@@ -86,6 +91,7 @@ html, body {
     font-family: @font-roboto;
 }
 body {
+    color: @gunmetal;
     font-size: 16px;
     font-weight: 200;
     min-width: 320px;
@@ -239,8 +245,7 @@ a {
     // graphics here
 }
 header {
-    .head-top {
-        color: @hose;
+    .head-top {        
         line-height: 40px;
         a {
             color: inherit;
@@ -292,7 +297,7 @@ header {
         transition: all 0.2s ease;
         display: none;
         a {
-            color: @nero;
+            color: inherit;
             padding: 12px 10px;
             .display(flex);
             .justify-content(space-between);

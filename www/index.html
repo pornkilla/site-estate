@@ -3,19 +3,19 @@
 <!-- <html class="no-js" lang="ru"> -->
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Недвижимость Карелии: Добро пожаловать!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Недвижимость Карелии: Добро пожаловать!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!-- <link rel="stylesheet" href="css/semantic.css"> -->
-  <link rel="stylesheet" href="css/reset.css">
-  <!--<link rel="stylesheet" href="css/style.css">-->
-  <link rel="stylesheet" href="less/style.css">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="less/style.css"> -->
 </head>
 <body class="mainpage">
   <!--[if lte IE 9]>
@@ -114,7 +114,27 @@
                 <i class="fa fa-angle-down"></i>
             </a>
         </div>
-        <div class="form-content"></div>
+        <div class="ui form bg-gunmetal">
+            <form class="wrapper">
+                <fieldset>
+                    <div class="form-item">
+                        <label for="">Стоимость, млн. руб.</label>
+                        <div id="double" class="ui double red range"></div>
+                            <div class="thre unstackable fields">
+                                <div class="field">                 
+                                    <input type="text" id="range-firstval" value="1">
+                                </div>
+                                <div class="wide field"></div>
+                                <div class="field">
+                                    <input type="text"id="range-secval"  value="30">
+                                    
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </fieldset>
+            </form>
+        </div>
       </div>
   </header>
 

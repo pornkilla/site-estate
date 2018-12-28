@@ -2162,25 +2162,31 @@ i {
   content: "\f2e0";
 }
 /*========== VARS ==========*/
+/* =Colors= */
 .bg-white {
+  color: #2b303a;
   background-color: #ffffff;
 }
 .bg-red {
   background-color: #be1d2d;
 }
 .bg-yellow {
+  color: #00120b;
   background-color: #fddc01;
 }
 .bg-gunmetal {
+  color: #b9baa3;
   background-color: #2b303a;
 }
 .bg-nero {
   background-color: #00120b;
 }
 .bg-hose {
+  color: #00120b;
   background-color: #b9baa3;
 }
 .bg-smoky {
+  color: #2b303a;
   background-color: #f0f0ec;
 }
 /*========== Flexy flex elements ==========*/
@@ -2283,8 +2289,8 @@ i {
   flex-direction: column;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
   box-sizing: inherit;
 }
@@ -2305,6 +2311,7 @@ body {
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #2b303a;
   background-color: #f0f0ec;
 }
 body .normal {
@@ -2364,7 +2371,7 @@ button,
   border: none;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   text-transform: uppercase;
   line-height: 1;
   font-style: normal;
@@ -2377,9 +2384,8 @@ button,
   user-select: none;
   border-radius: .25rem;
   -webkit-tap-highlight-color: transparent;
-  will-change: '';
-  -webkit-box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
-  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  -webkit-box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0 0 0 1px transparent inset, 0 0 0 0 rgba(34, 36, 38, 0.15) inset;
   transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 }
 button.clear,
@@ -2387,17 +2393,17 @@ button.clear,
   background-color: transparent;
 }
 strong {
-  font-weight: 800;
+  font-weight: 600;
 }
 p {
-  margin: 0em 0em 1em;
+  margin: 0 0 1em;
   line-height: 1.4285em;
 }
 p:first-child {
-  margin-top: 0em;
+  margin-top: 0;
 }
 p:last-child {
-  margin-bottom: 0em;
+  margin-bottom: 0;
 }
 a {
   color: #be1d2d;
@@ -2438,7 +2444,6 @@ a:hover {
   visibility: visible;
 }
 header .head-top {
-  color: #b9baa3;
   line-height: 40px;
 }
 header .head-top a {
@@ -2517,7 +2522,7 @@ header .head-nav {
   display: none;
 }
 header .head-nav a {
-  color: #00120b;
+  color: inherit;
   padding: 12px 10px;
   display: -webkit-box;
   display: -moz-box;
