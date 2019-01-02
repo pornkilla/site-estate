@@ -24,6 +24,18 @@
 .bg-gunmetal {
     color: @hose;
     background-color: @gunmetal;
+    .field {        
+        input[type="text"]:not(:focus),
+        .selection {
+            color: #ffffff !important;
+            background-color: @gunmetal;
+            border-color: @gunmetal-shade-light !important;
+            &.visible.dropdown > .text:not(.default) {
+                color: #ffffff;
+            }
+        }
+        
+    }
 }
 .bg-nero {
     background-color: @nero;
@@ -128,6 +140,7 @@ input[type="search"],
 input[type="password"] {
     -webkit-appearance: none;
     -moz-appearance: none;
+    font-family: @font-roboto !important;
     /* mobile firefox too! */
 }
 button,
@@ -365,63 +378,104 @@ header {
                 color: @smoky;
             }
         }
-    }
-    .head-search { 
-        z-index: 2;
-        position: relative;   
-        .selector {
-            margin-top: -50px;
-            color: @smoky;
-            position: relative;
-            background-color: rgba(43, 48, 58, 0.85);
-            li {
-              .flexy; 
-              .v-centered;
-              &.active {
-                padding: 13px 20px;
-              }
-              &:not(.active) {
-                  .hidden;
-              }
-            }
-            .toggle {
-                position: absolute;
-                top: 0;
-                right: 4px;
-                bottom: 0;
-                margin: auto;
-                font-size: 1.25rem;
-                line-height: 30px;
-                color: inherit;
-                padding: 0.5rem 1.125rem;
-            }
-        }
-        .name {
-            font-size: 1rem;
-            font-weight: 400;
-            text-transform: uppercase;
-        }
-        .icon {            
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-family: 'Fontello';
-            font-style: normal;
-            font-weight: normal;
-            speak: none;
-            display: inline-block;
-            width: 1em;
-            margin-right: .4em;
-            text-align: center;
-            font-variant: normal;
-            text-transform: none;            
-        }
-        .flats {
-            &::before {
-                content: '\e824';    
-            }
-        }
-    }    
+    }   
 }
+.head-search { 
+    z-index: 2;
+    position: relative;   
+    .wrapper {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    label {
+        font-weight: 100;
+    }
+    .selector {
+        margin-top: -50px;
+        color: @smoky;
+        position: relative;
+        background-color: rgba(43, 48, 58, 0.85);
+        li {
+          .flexy; 
+          .v-centered;
+          &.active {
+            padding: 13px 20px;
+          }
+          &:not(.active) {
+              .hidden;
+          }
+        }
+        .toggle {
+            position: absolute;
+            top: 0;
+            right: 4px;
+            bottom: 0;
+            margin: auto;
+            font-size: 1.25rem;
+            line-height: 30px;
+            color: inherit;
+            padding: 0.5rem 1.125rem;
+        }
+    }
+    .name {
+        font-size: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .icon {            
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-family: 'Fontello';
+        font-style: normal;
+        font-weight: normal;
+        speak: none;
+        display: inline-block;
+        width: 1em;
+        margin-right: .4em;
+        text-align: center;
+        font-variant: normal;
+        text-transform: none;            
+    }
+    .flats {
+        &::before {
+            content: '\e824';    
+        }
+    }
+    .form {
+        .ranger {
+            .field {
+                width: 80px;            
+            }
+            .first {
+                margin-left: auto;            
+            }
+            .last {
+                margin-right: auto;
+            }
+            .spacer {
+                width: 20px;
+            }
+        }
+        .selection {
+            .fa {                
+                cursor: pointer;
+                position: absolute;
+                width: auto;
+                height: auto;
+                line-height: 2;
+                top: 0;
+                font-size: 1.4em;
+                right: 0;
+                bottom: 0;
+                z-index: 3;
+                margin: 0;
+                padding: 0 14px;
+                opacity: .8;
+            }
+        }
+    }
+} 
 
 
 // To top button

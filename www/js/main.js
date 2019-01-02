@@ -44,22 +44,24 @@
         });
 
         // Semantic UI Range
-                
         $('#double').range({
-            min: 0,
-            max: 40,
-            start: 40,
-            step: 1,
+            min: 1,
+            max: 50,
+            start: 50,
+            step: 0.1,
             verbose: true,
             debug: true,
             onChange: function(value) {
               var
                 $self = $(this),
                 firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');
-                $('#range-firstval').val(firstVal);
-                $('#range-secval').val(secVal);
+                secVal = $self.range('get thumb value', 'second');                 
+                $('#range-min').val(secVal);
+                $('#range-max').val(firstVal);
             }
+          });
+          $('.ui.dropdown').dropdown({
+           
           });
     });
 }(jQuery));

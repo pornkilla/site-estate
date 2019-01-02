@@ -117,21 +117,39 @@
         <div class="ui form bg-gunmetal">
             <form class="wrapper">
                 <fieldset>
-                    <div class="form-item">
+                    <div class="form-item ranger">
                         <label for="">Стоимость, млн. руб.</label>
                         <div id="double" class="ui double red range"></div>
-                            <div class="thre unstackable fields">
-                                <div class="field">                 
-                                    <input type="text" id="range-firstval" value="1">
+                        <div class="flexy">
+                            <div class="field first">
+                                <input type="text" id="range-min" name="min" value="0">
+                            </div>
+                            <div class="spacer"></div>
+                            <div class="field last">
+                                <input type="text" id="range-max"  name="max">
+                            </div>
+                        </div>
+                    </div> 
+                   
+                    <div class="form-item field">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="gender">                            
+                            <div class="default text">Застройщик</div>
+                            <i class="fa fa-angle-down"></i>
+                            <div class="menu">
+                                <div class="item" data-value="build-1" data-text="Строительная компания ВЕК">
+                                        Строительная компания ВЕК
                                 </div>
-                                <div class="wide field"></div>
-                                <div class="field">
-                                    <input type="text"id="range-secval"  value="30">
-                                    
+                                <div class="item" data-value="build-1" data-text="Строительная компания ВЕК">
+                                Строительная компания ВЕК
+                                </div>
+                                <div class="item" data-value="build-2" data-text="ООО КСМ">
+                                ООО КСМ
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                     </div>
+                    
                 </fieldset>
             </form>
         </div>
