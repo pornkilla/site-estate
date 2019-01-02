@@ -3,193 +3,392 @@
 <!-- <html class="no-js" lang="ru"> -->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Недвижимость Карелии: Добро пожаловать!</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Недвижимость Карелии: Добро пожаловать!</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/semantic.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="less/style.css"> -->
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="css/semantic.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- <link rel="stylesheet" href="less/style.css"> -->
 </head>
+
 <body class="mainpage">
-  <!--[if lte IE 9]>
+	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <header>
-      <div class="head-top bg-gunmetal">
-          <div class="flexy spread">
-            <div id="mobile-toggle" class="burger">
-              <button class="button clear" type="button">
-                <i class="fa normal fa-fw fa-bars"></i>
-                <i class="fa opened fa-fw fa-angle-up"></i>
-              </button>
-            </div>
-            <div class="call">
-                <button type="button">заказать звонок</button>
-            </div>
-            <div class="social-icons">
-                <a href="#" class="fa fa-vk link"></a>
-                <a href="#" class="avito link"></a>
-                <a href="#" class="fa fa-instagram link"></a>
-            </div>
-            <div class="mobile-phones padded-right">
-              <a href="tel:+78142631313"><span>(8142)</span> 63-13-13</a>,&nbsp;
-              <a href="tel:+78142632488"><span>(8142)</span> 63-24-88</a>
-            </div>
-        </div>
-      </div>
-      <div class="head-main bg-white flexy spread">
-          <div class="logo"></div>
-          <div class="phones">
-            <span>Звоните нам:</span><br>
-            <a href="tel:+78142631313">(8142) <strong>63-13-13</strong></a><br>
-            <a href="tel:+78142632488">(8142) <strong>63-24-88</strong></a>
-          </div>
-          <div class="adress">
-              Петрозаводск<br>
-              <strong>Суворова 1, офис 2</strong><br>
-              пн &ndash; пт: 10:00 &ndash; 18:00
-          </div>
-      </div>
-      <nav id="menu-main" class="head-nav bg-yellow">
-          <ul>
-            <li><a href="#" class="item"><span>агентство</span> <i class="fa fa-angle-down"></i></a></li>
-            <li><a href="#" class="item"><span>каталог</span> <i class="fa fa-angle-down"></i></a></li>
-            <li><a href="#" class="item"><span>предложения</span> <i class="fa fa-angle-down"></i></a></li>
-            <li><a href="#" class="item"><span>услуги</span> <i class="fa fa-angle-down"></i></a></li>
-            <li><a href="#" class="item"><span>отзывы</span></a></li>
-            <li><a href="#" class="item"><span>новости</span></a></li>
-            <li><a href="#" class="item"><span>партнеры</span></a></li>
-            <li><a href="#" class="item"><span>контакты</span></a></li>
-          </ul>
-      </nav>
-      <div class="head-teaser">
-        <div class="pic"></div>
-        <div class="circle"></div>
-        <div class="text">
-          <p class="small">представь, что</p>
-          <p class="accent"><em>твой</em><br>новый дом</p>
-          <p class="small">уже в нашем каталоге!</p>
-        </div>
-      </div>
-      <div class="head-search">
-        <div class="selector">
-            <ul class="items">
-                <li class="active">
-                    <span class="icon flats"></span>
-                    <span class="name">новостройки</span>
-                </li>
-                <li>
-                    <span class="icon second"></span>
-                    <span class="name">вторичная</span>
-                </li>
-                <li>
-                    <span class="icon country"></span>
-                    <span class="name">загородная</span>
-                </li>
-                <li>
-                    <span class="icon exclusive"></span>
-                    <span class="name">эксклюзив</span>
-                </li>
-                <li>
-                    <span class="icon commerce"></span>
-                    <span class="name">коммерческая</span>
-                </li>
-                <li>
-                    <span class="icon rent"></span>
-                    <span class="name">аренда</span>
-                </li>
-                <li>
-                    <span class="icon land"></span>
-                    <span class="name">участки</span>
-                </li>            
-            </ul>
-            <a href="#" class="button clear toggle">
-                <i class="fa fa-angle-down"></i>
-            </a>
-        </div>
-        <div class="ui form bg-gunmetal">
-            <form class="wrapper">
-                <fieldset>
-                    <div class="form-item ranger">
-                        <label for="">Стоимость, млн. руб.</label>
-                        <div id="double" class="ui double red range"></div>
-                        <div class="flexy">
-                            <div class="field first">
-                                <input type="text" id="range-min" name="min" value="0">
-                            </div>
-                            <div class="spacer"></div>
-                            <div class="field last">
-                                <input type="text" id="range-max"  name="max">
-                            </div>
-                        </div>
-                    </div> 
-                   
-                    <div class="form-item field">
-                        <div class="ui selection dropdown">
-                            <input type="hidden" name="gender">                            
-                            <div class="default text">Застройщик</div>
-                            <i class="fa fa-angle-down"></i>
-                            <div class="menu">
-                                <div class="item" data-value="build-1" data-text="Строительная компания ВЕК">
-                                        Строительная компания ВЕК
-                                </div>
-                                <div class="item" data-value="build-1" data-text="Строительная компания ВЕК">
-                                Строительная компания ВЕК
-                                </div>
-                                <div class="item" data-value="build-2" data-text="ООО КСМ">
-                                ООО КСМ
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </fieldset>
-            </form>
-        </div>
-      </div>
-  </header>
+	<header>
+		<div class="head-top bg-gunmetal">
+			<div class="flexy spread">
+				<div id="mobile-toggle" class="burger">
+					<button class="button clear" type="button">
+						<i class="fa normal fa-fw fa-bars"></i>
+						<i class="fa opened fa-fw fa-angle-up"></i>
+					</button>
+				</div>
+				<div class="call">
+					<button type="button">заказать звонок</button>
+				</div>
+				<div class="social-icons">
+					<a href="#" class="fa fa-vk link"></a>
+					<a href="#" class="avito link"></a>
+					<a href="#" class="fa fa-instagram link"></a>
+				</div>
+				<div class="mobile-phones padded-right">
+					<a href="tel:+78142631313"><span>(8142)</span> 63-13-13</a>,&nbsp;
+					<a href="tel:+78142632488"><span>(8142)</span> 63-24-88</a>
+				</div>
+			</div>
+		</div>
+		<div class="head-main bg-white flexy spread">
+			<div class="logo"></div>
+			<div class="phones">
+				<span>Звоните нам:</span><br>
+				<a href="tel:+78142631313">(8142) <strong>63-13-13</strong></a><br>
+				<a href="tel:+78142632488">(8142) <strong>63-24-88</strong></a>
+			</div>
+			<div class="adress">
+				Петрозаводск<br>
+				<strong>Суворова 1, офис 2</strong><br>
+				пн &ndash; пт: 10:00 &ndash; 18:00
+			</div>
+		</div>
+		<nav id="menu-main" class="head-nav bg-yellow">
+			<ul>
+				<li><a href="#" class="item"><span>агентство</span> <i class="fa fa-angle-down"></i></a></li>
+				<li><a href="#" class="item"><span>каталог</span> <i class="fa fa-angle-down"></i></a></li>
+				<li><a href="#" class="item"><span>предложения</span> <i class="fa fa-angle-down"></i></a></li>
+				<li><a href="#" class="item"><span>услуги</span> <i class="fa fa-angle-down"></i></a></li>
+				<li><a href="#" class="item"><span>отзывы</span></a></li>
+				<li><a href="#" class="item"><span>новости</span></a></li>
+				<li><a href="#" class="item"><span>партнеры</span></a></li>
+				<li><a href="#" class="item"><span>контакты</span></a></li>
+			</ul>
+		</nav>
+		<div class="head-teaser">
+			<div class="pic"></div>
+			<div class="circle"></div>
+			<div class="text">
+				<p class="small">представь, что</p>
+				<p class="accent"><em>твой</em><br>новый дом</p>
+				<p class="small">уже в нашем каталоге!</p>
+			</div>
+		</div>
+		<div class="head-search">
+			<div class="selector">
+				<ul class="items">
+					<li class="active" data-target="search-flats" data-content="Новостройки">
+						<span class="icon flats"></span>
+						<span class="name">новостройки</span>
+					</li>
+					<li data-target="search-resale" data-content="Вторичная недвижимость">
+						<span class="icon resale"></span>
+						<span class="name">вторичная</span>
+					</li>
+					<li data-target="search-country" data-content="Загородная недвижимость">
+						<span class="icon country"></span>
+						<span class="name">загородная</span>
+					</li>
+					<li data-target="search-exclusive" data-content="Эксклюзивные варианты">
+						<span class="icon exclusive"></span>
+						<span class="name">эксклюзив</span>
+					</li>
+					<li data-target="search-commerce" data-content="Коммерческая недвижимость">
+						<span class="icon commerce"></span>
+						<span class="name">коммерческая</span>
+					</li>
+					<li data-target="search-rent" data-content="Аренда недвижимости">
+						<span class="icon rent"></span>
+						<span class="name">аренда</span>
+					</li>
+					<li data-target="search-rent" data-content="Участки">
+						<span class="icon land"></span>
+						<span class="name">участки</span>
+					</li>
+				</ul>
+				<button class="clear toggle">
+					<i class="fa fa-angle-down"></i>
+				</button>
+			</div>
+			<div class="ui form bg-gunmetal">
+				
+				<!-- Search forms for different types of realty categories -->
+				<!-- Display this form by default -->
+				<form class="wrapper" id="form-search-flats">
+					<div class="field-group">
+						<div class="form-item ranger">
+							<label for="">Стоимость, млн. руб.</label>
+							<div id="ranger-flats" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-flats" name="min" value="1.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-flats" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
 
-  <section class="main-offers"></section>
-  <section class="main-services"></section>
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="developer">
+								<div class="default text">Застройщик</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="developer-all" data-text="Все застройщики">
+										Все застройщики
+									</div>
+									<div class="item" data-value="developer-1" data-text="Строительная компания ВЕК">
+										Строительная компания ВЕК
+									</div>
+									<div class="item" data-value="developer-2" data-text="ООО КСМ">
+										ООО КСМ
+									</div>
+								</div>
+							</div>
+						</div>
 
-  <main class="main-about">
-      <div class="wrapper">
-          <h1>О нас</h1>
-          <p class="accent">
-              <strong>Группа компаний «Недвижимость Карелии»</strong>
-              <br>— это компания, специализирующаяся на предоставлении услуг купли, продажи и аренды жилой
-              и коммерческой недвижимости.</p>
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Кукковка">
+										Кукковка
+									</div>
+									<div class="item" data-value="district-2" data-text="Древлянка">
+										Древлянка
+									</div>
+									<div class="item" data-value="district-3" data-text="Центр">
+										Центр
+									</div>
+									<div class="item" data-value="district-4" data-text="Ключевая">
+										Ключевая
+									</div>
+								</div>
+							</div>
+						</div>
 
-          <h2>Наша миссия</h2>
-          <p>Предложить нашим клиентам полный спектр вариантов для подбора недвижимости на рынке по наилучшей цене.</p>
-          <p>Мы обеспечиваем полное юридическое сопровождение и безопасность сделки, ведь
-              интересы клиента для нас всегда на первом месте!</p>
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="date-end">
+								<div class="default text">Срок сдачи</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="date-end-any" data-text="Срок сдачи: любой">
+										Срок сдачи: любой
+									</div>
+									<div class="item" data-value="date-end-2020" data-text="Срок сдачи: 2020">
+										Срок сдачи: 2020
+									</div>
+									<div class="item" data-value="date-end-2019" data-text="Срок сдачи: 2019">
+										Срок сдачи: 2019
+									</div>
+									<div class="item" data-value="date-end-2018" data-text="Срок сдачи: 2018">
+										Срок сдачи: 2018
+									</div>
+									<div class="item" data-value="date-end-2017" data-text="Срок сдачи: 2017">
+										Срок сдачи: 2017
+									</div>
+								</div>
+							</div>
+						</div>
 
-          <h2>Наша репутация</h2>
-          <p>Мы являемся членами гильдии риелтеров Республики Карелия и имеем репутацию надежного партнера.</p>
-          <p>Членоство в гильдии одобрено только для тех компаний, которые заработали заслуженное доверие и имеют многолетний опыт работы в данной сфере.</p>
-      </div>
-  </main>
-  <section class="main-how"></section>
-  <section class="main-features"></section>
-  <section class="main-reviews"></section>
-  <footer>
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="rooms">
+								<div class="default text">Количество комнат</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="rooms-any" data-text="Любое количество комнат">
+										Любое количество комнат
+									</div>
+									<div class="item" data-value="rooms-1" data-text="1 комната">
+										1 комната
+									</div>
+									<div class="item" data-value="rooms-2" data-text="2 комнаты">
+										2 комнаты
+									</div>
+									<div class="item" data-value="rooms-3" data-text="3 комнаты">
+										3 комнаты
+									</div>
+									<div class="item" data-value="rooms-4" data-text="4 комнаты и больше">
+										4 комнаты и больше
+									</div>
+								</div>
+							</div>
+						</div>
 
-  </footer>
+						<button type="button">Найти</button>
+					</div>					
+				</form>
 
-  <div id="scroll-to-top"><i class="fa fa-arrow-circle-up"></i></div>
+				<form class="wrapper" id="form-search-resale">
+					<div class="field-group">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-second" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-second" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-second" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/vendor/semantic.js"></script>
-  <script src="js/main.js"></script> 
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="developer">
+								<div class="default text">Застройщик</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="developer-all" data-text="Все застройщики">
+										Все застройщики
+									</div>
+									<div class="item" data-value="developer-1" data-text="Строительная компания ВЕК">
+										Строительная компания ВЕК
+									</div>
+									<div class="item" data-value="developer-2" data-text="ООО КСМ">
+										ООО КСМ
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Кукковка">
+										Кукковка
+									</div>
+									<div class="item" data-value="district-2" data-text="Древлянка">
+										Древлянка
+									</div>
+									<div class="item" data-value="district-3" data-text="Центр">
+										Центр
+									</div>
+									<div class="item" data-value="district-4" data-text="Ключевая">
+										Ключевая
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="date-end">
+								<div class="default text">Срок сдачи</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="date-end-any" data-text="Срок сдачи: любой">
+										Срок сдачи: любой
+									</div>
+									<div class="item" data-value="date-end-2020" data-text="Срок сдачи: 2020">
+										Срок сдачи: 2020
+									</div>
+									<div class="item" data-value="date-end-2019" data-text="Срок сдачи: 2019">
+										Срок сдачи: 2019
+									</div>
+									<div class="item" data-value="date-end-2018" data-text="Срок сдачи: 2018">
+										Срок сдачи: 2018
+									</div>
+									<div class="item" data-value="date-end-2017" data-text="Срок сдачи: 2017">
+										Срок сдачи: 2017
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="rooms">
+								<div class="default text">Количество комнат</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="rooms-any" data-text="Любое количество комнат">
+										Любое количество комнат
+									</div>
+									<div class="item" data-value="rooms-1" data-text="1 комната">
+										1 комната
+									</div>
+									<div class="item" data-value="rooms-2" data-text="2 комнаты">
+										2 комнаты
+									</div>
+									<div class="item" data-value="rooms-3" data-text="3 комнаты">
+										3 комнаты
+									</div>
+									<div class="item" data-value="rooms-4" data-text="4 комнаты и больше">
+										4 комнаты и больше
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="button">Найти</button>
+					</div>					
+				</form>
+			</div>
+		</div>
+	</header>
+
+	<section class="main-offers"></section>
+	<section class="main-services"></section>
+
+	<main class="main-about">
+		<div class="wrapper">
+			<h1>О нас</h1>
+			<p class="accent">
+				<strong>Группа компаний «Недвижимость Карелии»</strong>
+				<br>— это компания, специализирующаяся на предоставлении услуг купли, продажи и аренды жилой
+				и коммерческой недвижимости.</p>
+
+			<h2>Наша миссия</h2>
+			<p>Предложить нашим клиентам полный спектр вариантов для подбора недвижимости на рынке по наилучшей цене.</p>
+			<p>Мы обеспечиваем полное юридическое сопровождение и безопасность сделки, ведь
+				интересы клиента для нас всегда на первом месте!</p>
+
+			<h2>Наша репутация</h2>
+			<p>Мы являемся членами гильдии риелтеров Республики Карелия и имеем репутацию надежного партнера.</p>
+			<p>Членоство в гильдии одобрено только для тех компаний, которые заработали заслуженное доверие и имеют многолетний
+				опыт работы в данной сфере.</p>
+		</div>
+	</main>
+	<section class="main-how"></section>
+	<section class="main-features"></section>
+	<section class="main-reviews"></section>
+	<footer>
+
+	</footer>
+
+	<div id="scroll-to-top"><i class="fa fa-arrow-circle-up"></i></div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+	<script src="js/vendor/semantic.js"></script>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

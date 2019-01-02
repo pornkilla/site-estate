@@ -44,8 +44,8 @@
         });
 
         // Semantic UI Range
-        $('#double').range({
-            min: 1,
+        $('#ranger-flats').range({
+            min: 1.5,
             max: 50,
             start: 50,
             step: 0.1,
@@ -56,12 +56,39 @@
                 $self = $(this),
                 firstVal = $self.range('get thumb value'),
                 secVal = $self.range('get thumb value', 'second');                 
-                $('#range-min').val(secVal);
-                $('#range-max').val(firstVal);
+                $('#range-min-flats').val(secVal);
+                $('#range-max-flats').val(firstVal);
             }
-          });
-          $('.ui.dropdown').dropdown({
-           
-          });
+        });
+        $('#ranger-second').range({
+            min: 0.5,
+            max: 30,
+            start: 30,
+            step: 0.1,
+            verbose: true,
+            debug: true,
+            onChange: function(value) {
+              var
+                $self = $(this),
+                firstVal = $self.range('get thumb value'),
+                secVal = $self.range('get thumb value', 'second');                 
+                $('#range-min-second').val(secVal);
+                $('#range-max-second').val(firstVal);
+            }
+        });
+
+        // Dropdowns
+        $('.ui.dropdown').dropdown();
+
+        // Tooltips
+        $('.head-search .selector .items li').popup({
+            inline     : true,
+            hoverable  : true,
+            position   : 'top center',
+            delay: {
+            show: 300,
+            hide: 800
+            }
+        });
     });
 }(jQuery));

@@ -34,7 +34,13 @@
                 color: #ffffff;
             }
         }
-        
+    }
+    .range .inner .track {
+        background-color: @gunmetal-shade-dark;
+    }
+    button {
+        color: #ffffff;
+        background-color: @red;
     }
 }
 .bg-nero {
@@ -171,9 +177,9 @@ button, .button {
     border: none;
     font-family: @font-roboto;
     font-size: 1rem;
+    line-height: 1.5;
     font-weight: 400;
-    text-transform: uppercase;
-    line-height: 1;
+    text-transform: uppercase;    
     font-style: normal;
     text-align: center;
     text-decoration: none;
@@ -267,6 +273,8 @@ header {
             text-align: left;            
             button {
                 color: inherit;
+                padding-top: 0;
+                padding-bottom: 0;
                 background-color: transparent;
             }
         } 
@@ -314,8 +322,9 @@ header {
             padding: 12px 10px;
             .display(flex);
             .justify-content(space-between);
-            span::first-letter {
-                text-transform: capitalize;
+            span { //::first-letter
+                // text-transform: capitalize;
+                text-transform: uppercase;
             }
         }
     }    
@@ -404,13 +413,15 @@ header {
           }
           &:not(.active) {
               .hidden;
+              .icon {
+                color: @hose;
+              }
           }
         }
         .toggle {
             position: absolute;
             top: 0;
-            right: 4px;
-            bottom: 0;
+            right: 4px;            
             margin: auto;
             font-size: 1.25rem;
             line-height: 30px;
@@ -442,7 +453,43 @@ header {
             content: '\e824';    
         }
     }
+    .resale {
+        &::before {
+            content: '\e823';    
+        }
+    }
+    .country {
+        &::before {
+            content: '\e821';
+        }
+    }
+    .exclusive {
+        &::before {
+            content: '\e813';
+        }
+    }
+    .commerce {
+        &::before {
+            content: '\e81e';
+        }
+    }
+    .rent {
+        &::before {
+            content: '\e801';
+        }
+    }
+    .land {
+        &::before {
+            content: '\e817';
+        }
+    }
     .form {
+        .form-item {
+            margin-bottom: 20px;
+            .field {
+                margin-bottom: 0;
+            }
+        }
         .ranger {
             .field {
                 width: 80px;            
@@ -473,6 +520,9 @@ header {
                 padding: 0 14px;
                 opacity: .8;
             }
+        }
+        button {
+            max-width: 280px;
         }
     }
 } 
