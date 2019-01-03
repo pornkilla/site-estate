@@ -2461,6 +2461,10 @@ a:hover {
   overflow: visible;
   visibility: visible;
 }
+sup {
+  vertical-align: super;
+  font-size: 0.5em;
+}
 header .head-top {
   line-height: 40px;
 }
@@ -2538,7 +2542,6 @@ header .head-main .adress {
   order: 3;
 }
 header .head-nav {
-  transition: all 0.2s ease;
   display: none;
 }
 header .head-nav a {
@@ -2664,11 +2667,15 @@ header .head-teaser .accent em {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-.head-search .selector li.active {
   padding: 13px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 .head-search .selector li:not(.active) {
+  height: 0;
+  padding: 0;
+}
+.head-search .selector li:not(.active):not(.visible) {
   height: 0;
   opacity: 0;
   overflow: hidden;
@@ -2676,6 +2683,11 @@ header .head-teaser .accent em {
 }
 .head-search .selector li:not(.active) .icon {
   color: #b9baa3;
+}
+.head-search .selector li.active,
+.head-search .selector li.visible {
+  height: auto;
+  padding: 13px 20px;
 }
 .head-search .selector .toggle {
   position: absolute;
@@ -2762,6 +2774,7 @@ header .head-teaser .accent em {
 }
 .head-search .form button {
   max-width: 280px;
+  width: 100%;
 }
 #scroll-to-top {
   width: 40px;
@@ -2975,10 +2988,10 @@ header .head-teaser .accent em {
     flex-wrap: nowrap;
   }
   .head-search .selector .items li {
-    height: auto;
-    opacity: 1;
-    overflow: visible;
-    visibility: visible;
+    height: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    visibility: visible !important;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     -webkit-flex: 1;
@@ -3025,11 +3038,11 @@ header .head-teaser .accent em {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
-  .head-search form > div:first-of-type {
+  .head-search form > .spec {
     margin-right: 20px;
     min-width: 240px;
   }
-  .head-search form > div:first-of-type > * {
+  .head-search form > .spec > * {
     width: 100%;
   }
   .head-search .field-group {
@@ -3145,8 +3158,8 @@ header .head-teaser .accent em {
   .head-search .selector .name {
     font-size: 0.875rem;
   }
-  .head-search form > div:first-of-type {
-    min-width: 280px;
+  .head-search form > .spec {
+    min-width: 260px;
   }
   .head-search .field-group.gridy > * {
     width: 240px;

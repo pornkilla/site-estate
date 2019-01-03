@@ -82,7 +82,7 @@
 		<div class="head-search">
 			<div class="selector">
 				<ul class="items">
-					<li class="active" data-target="search-flats" data-content="Новостройки">
+					<li data-target="search-flats" data-content="Новостройки" class="active">
 						<span class="icon flats"></span>
 						<span class="name">новостройки</span>
 					</li>
@@ -106,7 +106,7 @@
 						<span class="icon rent"></span>
 						<span class="name">аренда</span>
 					</li>
-					<li data-target="search-rent" data-content="Участки">
+					<li data-target="search-land" data-content="Участки">
 						<span class="icon land"></span>
 						<span class="name">участки</span>
 					</li>
@@ -120,7 +120,7 @@
 				<!-- Search forms for different types of realty categories -->
 				<!-- Display this form by default -->
 				<form class="wrapper" id="form-search-flats">
-					<div class="field-group">
+					<div class="field-group spec">
 						<div class="form-item ranger">
 							<label for="">Стоимость, млн. руб.</label>
 							<div id="ranger-flats" class="ui double red range"></div>
@@ -236,42 +236,39 @@
 				</form>
 
 				<form class="wrapper" id="form-search-resale">
-					<div class="field-group">
+					<div class="field-group spec">
 						<div class="form-item ranger">
 							<label>Стоимость, млн. руб.</label>
-							<div id="ranger-second" class="ui double red range"></div>
+							<div id="ranger-resale" class="ui double red range"></div>
 							<div class="flexy">
 								<div class="field first">
-									<input type="text" id="range-min-second" name="min" value="0.5">
+									<input type="text" id="range-min-resale" name="min" value="0.5">
 								</div>
 								<div class="spacer"></div>
 								<div class="field last">
-									<input type="text" id="range-max-second" name="max">
+									<input type="text" id="range-max-resale" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Площадь, м<sup>2</sup></label>
+							<div id="ranger-resale-meters" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-resale-meters" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-resale-meters" name="max">
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<div class="field-group gridy">
-						<div class="form-item field">
-							<div class="ui selection dropdown">
-								<input type="hidden" name="developer">
-								<div class="default text">Застройщик</div>
-								<i class="fa fa-angle-down"></i>
-								<div class="menu">
-									<div class="item" data-value="developer-all" data-text="Все застройщики">
-										Все застройщики
-									</div>
-									<div class="item" data-value="developer-1" data-text="Строительная компания ВЕК">
-										Строительная компания ВЕК
-									</div>
-									<div class="item" data-value="developer-2" data-text="ООО КСМ">
-										ООО КСМ
-									</div>
-								</div>
-							</div>
-						</div>
-
 						<div class="form-item field">
 							<div class="ui selection dropdown">
 								<input type="hidden" name="district">
@@ -292,31 +289,6 @@
 									</div>
 									<div class="item" data-value="district-4" data-text="Ключевая">
 										Ключевая
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-item field">
-							<div class="ui selection dropdown">
-								<input type="hidden" name="date-end">
-								<div class="default text">Срок сдачи</div>
-								<i class="fa fa-angle-down"></i>
-								<div class="menu">
-									<div class="item" data-value="date-end-any" data-text="Срок сдачи: любой">
-										Срок сдачи: любой
-									</div>
-									<div class="item" data-value="date-end-2020" data-text="Срок сдачи: 2020">
-										Срок сдачи: 2020
-									</div>
-									<div class="item" data-value="date-end-2019" data-text="Срок сдачи: 2019">
-										Срок сдачи: 2019
-									</div>
-									<div class="item" data-value="date-end-2018" data-text="Срок сдачи: 2018">
-										Срок сдачи: 2018
-									</div>
-									<div class="item" data-value="date-end-2017" data-text="Срок сдачи: 2017">
-										Срок сдачи: 2017
 									</div>
 								</div>
 							</div>
@@ -346,6 +318,434 @@
 								</div>
 							</div>
 						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="building-type">
+								<div class="default text">Тип дома</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="building-type-any" data-text="Любой тип дома">
+										Любой тип дома
+									</div>
+									<div class="item" data-value="building-type-1" data-text="кирпичный">
+										кирпичный
+									</div>
+									<div class="item" data-value="building-type-2" data-text="панельный">
+										панельный
+									</div>
+									<div class="item" data-value="building-type-3" data-text="монолит">
+										монолит
+									</div>
+									<div class="item" data-value="building-type-4" data-text="деревянный">
+										деревянный
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<button type="button">Найти</button>
+					</div>					
+				</form>
+
+				<form class="wrapper" id="form-search-country">
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-country" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-country" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-country" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Прионежский">
+										Прионежский
+									</div>
+									<div class="item" data-value="district-2" data-text="Олонецкий">
+										Олонецкий
+									</div>
+									<div class="item" data-value="district-3" data-text="Питкярантский">
+										Питкярантский
+									</div>
+									<div class="item" data-value="district-4" data-text="Сортавальский">
+										Сортавальский
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="object-type">
+								<div class="default text">Тип объекта</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="object-type-any" data-text="Любой тип объекта">
+										Любой тип объекта
+									</div>
+									<div class="item" data-value="object-type-1" data-text="дом">
+										дом
+									</div>
+									<div class="item" data-value="object-type-2" data-text="коттедж">
+										коттедж
+									</div>
+									<div class="item" data-value="object-type-3" data-text="таунхаус">
+										таунхаус
+									</div>									
+								</div>
+							</div>
+						</div>
+						
+						<button type="button">Найти</button>
+					</div>					
+				</form>
+
+				<form class="wrapper" id="form-search-exclusive">
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-exclusive" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-exclusive" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-exclusive" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Площадь, м<sup>2</sup></label>
+							<div id="ranger-exclusive-meters" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-exclusive-meters" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-exclusive-meters" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Прионежский">
+										Прионежский
+									</div>
+									<div class="item" data-value="district-2" data-text="Олонецкий">
+										Олонецкий
+									</div>
+									<div class="item" data-value="district-3" data-text="Питкярантский">
+										Питкярантский
+									</div>
+									<div class="item" data-value="district-4" data-text="Сортавальский">
+										Сортавальский
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="object-type">
+								<div class="default text">Тип объекта</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="object-type-any" data-text="Любой тип объекта">
+										Любой тип объекта
+									</div>
+									<div class="item" data-value="object-type-1" data-text="квартира">
+										квартира
+									</div>
+									<div class="item" data-value="object-type-2" data-text="дом">
+										дом
+									</div>
+									<div class="item" data-value="object-type-3" data-text="коттедж">
+										коттедж
+									</div>
+									<div class="item" data-value="object-type-4" data-text="таунхаус">
+										таунхаус
+									</div>									
+								</div>
+							</div>
+						</div>
+						
+						<button type="button">Найти</button>
+					</div>					
+				</form>
+
+				<form class="wrapper" id="form-search-commerce">
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-commerce" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-commerce" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-commerce" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Площадь, м<sup>2</sup></label>
+							<div id="ranger-commerce-meters" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-commerce-meters" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-commerce-meters" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group gridy">					
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Кукковка">
+										Кукковка
+									</div>
+									<div class="item" data-value="district-2" data-text="Древлянка">
+										Древлянка
+									</div>
+									<div class="item" data-value="district-3" data-text="Центр">
+										Центр
+									</div>
+									<div class="item" data-value="district-4" data-text="Ключевая">
+										Ключевая
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<button type="button">Найти</button>
+					</div>					
+				</form>
+
+				<form class="wrapper" id="form-search-rent">
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-rent" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-rent" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-rent" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="object-type">
+								<div class="default text">Тип объекта</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="object-type-any" data-text="Любой тип объекта">
+										Любой тип объекта
+									</div>
+									<div class="item" data-value="object-type-1" data-text="комната">
+										комната
+									</div>
+									<div class="item" data-value="object-type-2" data-text="квартира">
+										квартира
+									</div>
+									<div class="item" data-value="object-type-3" data-text="дом">
+										дом
+									</div>
+									<div class="item" data-value="object-type-4" data-text="коттедж">
+										коттедж
+									</div>
+									<div class="item" data-value="object-type-5" data-text="таунхаус">
+										таунхаус
+									</div>									
+								</div>
+							</div>
+						</div>
+
+							<div class="form-item field">
+								<div class="ui selection dropdown">
+									<input type="hidden" name="district">
+									<div class="default text">Район</div>
+									<i class="fa fa-angle-down"></i>
+									<div class="menu">
+										<div class="item" data-value="district-all" data-text="Все районы">
+											Все районы
+										</div>
+										<div class="item" data-value="district-1" data-text="Кукковка">
+											Кукковка
+										</div>
+										<div class="item" data-value="district-2" data-text="Древлянка">
+											Древлянка
+										</div>
+										<div class="item" data-value="district-3" data-text="Центр">
+											Центр
+										</div>
+										<div class="item" data-value="district-4" data-text="Ключевая">
+											Ключевая
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-item field">
+								<div class="ui selection dropdown">
+									<input type="hidden" name="period">
+									<div class="default text">Срок аренды</div>
+									<i class="fa fa-angle-down"></i>
+									<div class="menu">
+										<div class="item" data-value="district-all" data-text="Любой срок">
+											Любой срок
+										</div>
+										<div class="item" data-value="district-1" data-text="сутки">
+											сутки
+										</div>
+										<div class="item" data-value="district-2" data-text="месяц">
+											месяц
+										</div>
+										<div class="item" data-value="district-3" data-text="год">
+											год
+										</div>										
+									</div>
+								</div>
+							</div>
+							<button type="button">Найти</button>
+						</div>						
+						
+				</form>
+
+				<form class="wrapper" id="form-search-land">
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Стоимость, млн. руб.</label>
+							<div id="ranger-land" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-land" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-land" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group spec">
+						<div class="form-item ranger">
+							<label>Площадь, м<sup>2</sup></label>
+							<div id="ranger-land-meters" class="ui double red range"></div>
+							<div class="flexy">
+								<div class="field first">
+									<input type="text" id="range-min-land-meters" name="min" value="0.5">
+								</div>
+								<div class="spacer"></div>
+								<div class="field last">
+									<input type="text" id="range-max-land-meters" name="max">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="field-group gridy">
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="district">
+								<div class="default text">Район</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="district-all" data-text="Все районы">
+										Все районы
+									</div>
+									<div class="item" data-value="district-1" data-text="Прионежский">
+										Прионежский
+									</div>
+									<div class="item" data-value="district-2" data-text="Олонецкий">
+										Олонецкий
+									</div>
+									<div class="item" data-value="district-3" data-text="Питкярантский">
+										Питкярантский
+									</div>
+									<div class="item" data-value="district-4" data-text="Сортавальский">
+										Сортавальский
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-item field">
+							<div class="ui selection dropdown">
+								<input type="hidden" name="object-type">
+								<div class="default text">Тип участка</div>
+								<i class="fa fa-angle-down"></i>
+								<div class="menu">
+									<div class="item" data-value="object-type-any" data-text="Любой тип участка">
+										Любой тип участка
+									</div>
+									<div class="item" data-value="object-type-1" data-text="ИЖС">
+										ИЖС
+									</div>
+									<div class="item" data-value="object-type-2" data-text="СНТ">
+										СНТ
+									</div>
+									<div class="item" data-value="object-type-3" data-text="ДНТ">
+										ДНТ
+									</div>																		
+								</div>
+							</div>
+						</div>
+						
 						<button type="button">Найти</button>
 					</div>					
 				</form>

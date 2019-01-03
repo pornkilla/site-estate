@@ -141,7 +141,10 @@
                 .full-aligned;
                 .nowrap;
                 li {
-                    .visible;
+                    height: auto !important;
+                    opacity: 1 !important;
+                    overflow: visible !important;
+                    visibility: visible !important;
                     .flex(1);
                     .flex-direction(column);
                     padding: 13px 20px;
@@ -166,7 +169,7 @@
             .flexy;
             .h-aligned;
             .nowrap;
-            & > div:first-of-type {
+            & > .spec {
                 margin-right: 20px;
                 min-width: 240px;
                 & > * {
@@ -267,8 +270,8 @@
             }
         }
         form {
-            & > div:first-of-type {
-                min-width: 280px;
+            & > .spec {
+                min-width: 260px;
             }
         }
         .field-group {            
