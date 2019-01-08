@@ -2410,6 +2410,11 @@ button.clear,
 .button.clear {
   background-color: transparent;
 }
+h2 {
+  font-size: 1.875rem;
+  font-family: Appetite;
+  color: gunmetal;
+}
 strong {
   font-weight: 600;
 }
@@ -2464,6 +2469,19 @@ a:hover {
 sup {
   vertical-align: super;
   font-size: 0.5em;
+}
+.mainpage .wrapper {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.mainpage p {
+  text-align: center;
+}
+.mainpage h2 {
+  margin-bottom: 2em;
+}
+header {
+  position: relative;
 }
 header .head-top {
   line-height: 40px;
@@ -2542,7 +2560,12 @@ header .head-main .adress {
   order: 3;
 }
 header .head-nav {
+  position: absolute;
   display: none;
+  top: 40px;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }
 header .head-nav a {
   color: inherit;
@@ -2577,6 +2600,18 @@ header .logo {
   background-image: url('../images/logo-vertical.svg');
   background-position: center center;
   background-repeat: no-repeat;
+  position: relative;
+}
+header .logo h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 header .head-teaser {
   position: relative;
@@ -2776,6 +2811,149 @@ header .head-teaser .accent em {
   max-width: 280px;
   width: 100%;
 }
+.main-offers {
+  text-align: center;
+}
+.realty.grid .item .segment {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+.realty.grid .item .details {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.realty.grid .item .details h3 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  color: #2b303a;
+}
+.realty.grid .item .price {
+  text-align: center;
+}
+.realty.grid .item .pic {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  margin: -1rem -1rem 1rem -1rem;
+  background-color: #f0f0ec;
+}
+.realty.grid .item .pic.empty {
+  text-align: center;
+}
+.realty.grid .item .pic.empty::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 1;
+  font-family: Fontello;
+  color: #b9baa3;
+  font-size: 4rem;
+  position: absolute;
+}
+.realty.grid .item .pic img {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  bottom: 0;
+  display: block;
+}
+.realty.grid .item .type {
+  display: block;
+  position: absolute;
+  right: 10px;
+  font-family: 'Roboto', sans-serif;
+  bottom: 10px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.75rem;
+}
+.realty.grid .item.flats .type {
+  color: #ffffff;
+  background-color: #be1d2d;
+}
+.realty.grid .item.flats .empty::before {
+  content: '\e824';
+}
+.realty.grid .item.resale .type {
+  color: #ffffff;
+  background-color: #93a2ba;
+}
+.realty.grid .item.resale .empty::before {
+  content: '\e823';
+}
+.realty.grid .item.country .type {
+  color: #2b303a;
+  background-color: #fddc01;
+}
+.realty.grid .item.country .empty::before {
+  content: '\e821';
+}
+.realty.grid .item.exclusive .type {
+  color: #f0f0ec;
+  background-color: #2b303a;
+}
+.realty.grid .item.exclusive .empty::before {
+  content: '\e813';
+}
+.realty.grid .item.commerce .type {
+  color: #2b303a;
+  background-color: #b9baa3;
+}
+.realty.grid .item.commerce .empty::before {
+  content: '\e81e';
+}
+.realty.grid .item.rent .type {
+  color: #93a2ba;
+  background-color: #00120b;
+}
+.realty.grid .item.rent .empty::before {
+  content: '\e801';
+}
+.realty.grid .item.land .type {
+  color: #2b303a;
+  background-color: #f0f0ec;
+}
+.realty.grid .item.land .empty::before {
+  content: '\e817';
+}
+ui.popup .content {
+  text-align: center;
+}
 #scroll-to-top {
   width: 40px;
   height: 40px;
@@ -2810,6 +2988,9 @@ header .head-teaser .accent em {
     padding-top: 60px;
     text-align: left;
   }
+  .realty.grid .item .pic {
+    max-height: 300px;
+  }
 }
 @media (min-width: 36em) {
   header .head-teaser .pic {
@@ -2823,6 +3004,9 @@ header .head-teaser .accent em {
     left: -100px;
     width: 370px;
     height: 370px;
+  }
+  .realty.grid .item .pic {
+    max-height: 240px;
   }
 }
 @media (min-width: 48em) {
@@ -3075,6 +3259,12 @@ header .head-teaser .accent em {
   .head-search .field-group.gridy > * {
     width: 225px;
   }
+  .realty.grid .item .pic {
+    max-height: 180px;
+  }
+  .realty.grid .segment {
+    min-height: 380px;
+  }
 }
 @media (min-width: 60em) {
   header .burger {
@@ -3104,6 +3294,9 @@ header .head-teaser .accent em {
     margin: 0 auto;
     max-width: 1120px;
     text-align: center;
+    left: 0;
+    right: 0;
+    top: 140px;
   }
   header .head-nav ul {
     display: -webkit-box;

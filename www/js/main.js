@@ -6,6 +6,7 @@
         mobileToggler = $('#mobile-toggle'),
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
+        realtyMenuItemHint = $('.head-search .selector .icon'),
         scrollMeTop = $('#scroll-to-top');
 
         function mobileMenuInAction() {
@@ -257,19 +258,15 @@
         $('.ui.dropdown').dropdown();
 
         // Tooltips
-        if (realtyMenuItem.hasClass('visible') == true) {
-            return;
-        } else {
-            realtyMenuItem.popup({
-                on         : 'hover',
-                inline     : true,
-                hoverable  : true,
-                position   : 'top center',
-                delay: {
-                    show: 500,
-                    hide: 400
-                }
-            });
-        }        
+        realtyMenuItemHint.popup({
+            on         : 'hover',
+            inline     : false,
+            hoverable  : true,
+            position   : 'top center',
+            delay: {
+                show: 500,
+                hide: 400
+            }
+        });       
     });
 }(jQuery));

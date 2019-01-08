@@ -15,6 +15,15 @@
             }           
         }
     }
+    .realty {
+        &.grid {
+            .item {
+                .pic {
+                    max-height: 300px;
+                }                
+            }
+        }
+    }    
 }
 
 //*** Screen576+
@@ -30,6 +39,15 @@
             .circle {
                 left: -100px;
                 .size(370px,370px);                
+            }
+        }
+    }
+    .realty {
+        &.grid {
+            .item {
+                .pic {
+                    max-height: 240px;
+                }                
             }
         }
     }
@@ -190,6 +208,18 @@
             }
         }
     }
+    .realty {
+        &.grid {
+            .item {
+                .pic {
+                    max-height: 180px;
+                }
+            }
+            .segment {
+                min-height: 380px;
+            }
+        }
+    }
 }
 
 //*** Screen 960+
@@ -218,7 +248,10 @@
         display: block;
         margin: 0 auto;
         max-width: 1120px;
-        text-align: center;        
+        text-align: center;
+        left: 0;
+        right: 0;
+        top: 140px;
         ul {                
             .flexy;
             .spread;
