@@ -212,14 +212,75 @@
         &.grid {
             .item {
                 .pic {
-                    max-height: 180px;
+                    img {
+                        min-width: auto;
+                        min-height: auto;
+                        max-width: initial;
+                        max-height: initial;
+                        height: 350px;                        
+                    }
+                }
+                .details {
+                    min-height: 160px;
                 }
             }
-            .segment {
-                min-height: 380px;
+            
+        }
+    }
+    .main-services {
+        .liner {
+            text-align: left;
+        }
+        .text {            
+            padding-right: 20px;            
+            .flex(1);
+            p {
+                text-align: left;
+            }
+        }
+        .pic {
+            padding-left: 20px;
+            width: 60%;            
+        }
+        .list {
+            ul {
+                margin-left: 0;
+                margin-right: 0;
             }
         }
     }
+    .main-about {
+        .twister {
+            .flex-wrap(wrap);
+        }
+        strong {
+            display: inline;            
+        }        
+        .para {
+            .flex-grow(1);
+            width: 30%;
+            flex-basis: 30%;
+            &:not(.wide) {
+                text-align: left;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .wide {
+            flex-basis: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            .flex-grow(3);
+        }
+        .guild {
+            margin-bottom: 3rem;
+        }
+    }
+    .twister {        
+        .flex-direction(row);
+    }
+    
 }
 
 //*** Screen 960+
@@ -290,7 +351,7 @@
     }
     .head-search {
         .wrapper {
-            max-width: 1120px;
+            .size-limiter;
         }
         .selector {
             .items {
@@ -313,6 +374,11 @@
                     width: 240px;
                 }
             }
+        }
+    }
+    section {
+        .wrapper {
+            .size-limiter;
         }
     }
 }

@@ -47,12 +47,19 @@
     background-color: @nero;
 }
 .bg-hose {
-    color: @nero;
+    color: #ffffff;
     background-color: @hose;
 }
 .bg-smoky {
     color: @gunmetal;
     background-color: @smoky;
+}
+.bg-city {
+    background-color: @smoky;
+    background-image: url('../images/bg_city.svg');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: auto 162px;
 }
 
 /*========== Flexy flex elements ==========*/
@@ -201,12 +208,19 @@ button, .button {
     &.clear {
         background-color: transparent;
     }
+    &.wide {
+        min-width: 280px;
+    }
 }
-h1 {}
 h2 {
     font-size: 1.875rem;
     font-family: Appetite;
-    color: gunmetal;
+    color: @gunmetal;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
 }
 strong {
     font-weight: 600;
@@ -251,6 +265,10 @@ a {
     padding-left: 20px;
     padding-right: 20px;
     position: relative;
+    text-align: center;
+}
+.size-limiter {
+    max-width: 1120px;
 }
 .hidden {
     height: 0;
@@ -264,6 +282,30 @@ a {
     overflow: visible;
     visibility: visible;
 }
+.liner {
+    position: relative;
+    padding-bottom: 0.75em;    
+    &::before, &::after {
+        position: absolute;
+        bottom: 0;
+        height: 1px;
+        display: block;
+        content: '';        
+    }
+    &::before {
+        left: 0;
+        width: 34px;
+        background-color: @yellow;
+    }
+    &::after {
+        left: 36px;
+        right: 0;
+        background-color: @hose;
+        .bg-hose & {
+            background-color: @smoky;
+        }
+    }
+}
 sup {
     vertical-align: super;
     font-size: 0.5em;
@@ -275,11 +317,12 @@ sup {
         padding-top: 3rem;
         padding-bottom: 3rem;
     }    
-    p {
+    section p {
         text-align: center;
     }
-    h2 {
-        margin-bottom: 2em;
+    h2:not(.liner) {
+        margin-bottom: 1.1em;
+        text-transform: uppercase;
     }
 }
 header {
@@ -570,7 +613,96 @@ header {
     }
 }
 .main-offers {
-    text-align: center;
+    .grid {
+        margin-bottom: 2em;
+    }
+}
+.twister {
+    .flexy;
+    .flex-direction(column);    
+}
+.main-services {
+    padding-left: 5%;
+    padding-right: 5%;
+    .liner {
+        margin-bottom: 1.25rem;
+    }
+    p {
+        color: @gunmetal;        
+    }
+    .pic {
+        margin-top: 20px;
+        img {
+            display: block;
+            border: @smoky 5px solid;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .list {
+        ul {
+            display: block;
+            margin-left: 20px;
+            margin-right: 20px;
+            a {
+                text-transform: uppercase;
+                color: #ffffff;
+                font-weight: 600;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                display: inline-block;
+                line-height: 1.47;
+            }
+            li {
+                text-align: left;
+                width: 100%;
+                padding-left: 20px;
+                position: relative;                
+                display: inline-block;
+                &::before {
+                    line-height: 1;
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    top: 14px;
+                    font-size: 22px;
+                    content: '»';
+                } 
+            }
+        }
+    }
+}
+.main-about {
+    .accent {
+        font-size: 1.5rem;        
+        strong {
+            display: inline-block;
+            width: 100%;
+        }
+    }
+    .para {
+        margin-bottom: 3rem;
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+    .guild {
+        .size(196px,196px);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: -140px;
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+}
+.main-how {
+    padding-top: 100px;
+    h2 {
+        color: #ffffff;
+    }
 }
 .realty {
     &.grid {
@@ -580,51 +712,72 @@ header {
                 .flex-wrap(nowrap);
                 .flex-direction(column);
                 overflow: hidden;
+                box-shadow: 0px 4px 6px 0 rgba(34, 36, 38, 0.15);
             }
             .details {
                 .flex(1);
                 .display(flex);
                 .flex-wrap(nowrap);
-                .flex-direction(column);
+                .flex-direction(column);                
+                min-height: 115px;
                 h3 {
                     .flex(1);
                     color: @gunmetal;
+                    margin-bottom: 10px;
+                    line-height: 1.47;
                 }
             }
             .price {
                 text-align: center;
+                border-top: @hose 1px solid;
+                padding-top: 1em;
+                color: @red;
+                font-weight: 600;
+                margin-top: 10px;                
+            }
+            .location {                
+                font-size: 0.875rem;
+                line-height: 1.47;
+                text-align: left;
+                color: @hose;
+                position: relative;
+                padding-left: 16px;
+                i {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin-right: 5px;
+                }
             }
             .pic {
                 position: relative;
-                min-height: 240px;
+                min-width: 100%;
                 overflow: hidden;
                 margin: -1rem -1rem 1rem -1rem;
                 background-color: @smoky;
                 &.empty {
                     text-align: center;                    
                     &::before { 
-                        top: 0;
-                        left: 0;
-                        right: 0;
-                        bottom: 0; 
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                         line-height: 1;                        
                         font-family: Fontello;
                         color: @hose;
-                        font-size: 4rem;                       
+                        font-size: 5rem;                       
                         position: absolute;
                     }
                 }
                 img {
                     max-width: 100%;
                     max-height: 100%;
-                    position: relative;
-                    bottom: 0;
                     display: block;
                 }                
             }
             .type {
                 display: block;
                 position: absolute;
+                z-index: 2;
                 right: 10px;
                 font-family: @font-roboto;
                 bottom: 10px;
