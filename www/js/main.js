@@ -267,6 +267,14 @@
                 show: 500,
                 hide: 400
             }
-        });       
+        }); 
+        
+        // Glider slider
+        $('.slider').glide({
+            autoplay: false,
+            arrowsWrapperClass: 'slider-arrows',
+            arrowRightText: '',
+            arrowLeftText: ''
+          });
     });
 }(jQuery));
