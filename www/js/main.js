@@ -7,6 +7,7 @@
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
         realtyMenuItemHint = $('.head-search .selector .icon'),
+        partnersLogo = $('.partner'),
         socialIcons = $('.social-link'),
         scrollMeTop = $('#scroll-to-top');
 
@@ -256,7 +257,7 @@
         });
 
         // Dropdowns
-        $('.ui.dropdown').dropdown();
+        $('.ui.dropdown').dropdown();        
 
         // Tooltips
         realtyMenuItemHint.popup({
@@ -271,6 +272,9 @@
         }); 
         socialIcons.popup({
             position   : 'bottom center'
+        });
+        partnersLogo.popup({
+            position   : 'top center'
         });
         
         // Glider slider

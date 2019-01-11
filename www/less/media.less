@@ -1,5 +1,6 @@
 // out: false
 @import "lesshat";
+
 //*** Screen 480+
 @media (min-width: 30em) {
     header {
@@ -44,10 +45,14 @@
     }
     .realty {
         &.grid {
-            .item {
+            .item {                
                 .pic {
                     max-height: 240px;
                 }
+            }
+            .segment {
+                margin-left: 10%;
+                margin-right: 10%;
             }
         }
     }
@@ -227,7 +232,7 @@
     }
     .realty {
         &.grid {
-            .item {
+            .item {                
                 .pic {
                     img {
                         min-width: auto;
@@ -238,8 +243,12 @@
                     }
                 }
                 .details {
-                    min-height: 160px;
+                    min-height: 140px;
                 }
+            }
+            .segment {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }
@@ -377,8 +386,11 @@
             ul {
                 .flexy;
                 .spread;
+                & > li {
+                    width: auto;
+                }
             }
-            a {
+            .nav-link {
                 display: inline-block;
                 padding-top: 22px;
                 padding-bottom: 22px;
@@ -453,3 +465,22 @@
 
 //*** Screen 1920+
 @media (min-width: 120em) {}
+
+// Only mobile
+@media (min-width: 20em) and (max-width: 48em) {
+    .head-nav {
+        .dropdown {
+            transition: none;
+            .inverted.menu {                
+                display: none;
+                position: relative;
+                border: none;
+                box-shadow: none;
+                border-bottom: 1px solid rgba(34, 36, 38, 0.15);
+                a {
+                    padding-left: 25px;
+                }
+            }
+        }
+    }    
+}

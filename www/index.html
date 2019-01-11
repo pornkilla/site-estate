@@ -61,14 +61,46 @@
 		</div>
 		<nav id="menu-main" class="head-nav bg-yellow">
 			<ul>
-				<li><a href="#" class="item"><span>агентство</span> <i class="fa fa-angle-down"></i></a></li>
-				<li><a href="#" class="item"><span>каталог</span> <i class="fa fa-angle-down"></i></a></li>
-				<li><a href="#" class="item"><span>предложения</span> <i class="fa fa-angle-down"></i></a></li>
-				<li><a href="#" class="item"><span>услуги</span> <i class="fa fa-angle-down"></i></a></li>
-				<li><a href="#" class="item"><span>отзывы</span></a></li>
-				<li><a href="#" class="item"><span>новости</span></a></li>
-				<li><a href="#" class="item"><span>партнеры</span></a></li>
-				<li><a href="#" class="item"><span>контакты</span></a></li>
+				<li class="ui dropdown item">					
+					<a href="javascript:void(0);" class="nav-link">
+						<span>агентство</span> <i class="fa fa-angle-down"></i>
+					</a>
+					<div class="ui yellow inverted menu">
+						<a class="item" href="#">О компании</a>
+						<a class="item" href="#">Наши специалисты</a>
+						<a class="item" href="#">Вакансии</a>						
+					</div>					
+				</li>
+				<li class="ui dropdown item">					
+					<a href="javascript:void(0);" class="nav-link">
+						<span>каталог</span> <i class="fa fa-angle-down"></i>
+					</a>
+					<div class="ui yellow inverted menu">
+						<a class="item" href="#">Новостройки</a>
+						<a class="item" href="#">Вторичный рынок</a>
+						<a class="item" href="#">Дома и дачи</a>
+						<a class="item" href="#">Эксклюзив</a>
+						<a class="item" href="#">Коммерческая недвижимость</a>
+						<a class="item" href="#">Аренда</a>
+						<a class="item" href="#">Земельные участки</a>
+					</div>					
+				</li>
+				<li><a href="#" class="nav-link"><span>предложения</span></a></li>
+				<li class="ui dropdown item">					
+						<a href="javascript:void(0);" class="nav-link">
+							<span>услуги</span> <i class="fa fa-angle-down"></i>
+						</a>
+						<div class="ui yellow inverted menu">
+							<a class="item" href="#">Продажа недвижимости</a>
+							<a class="item" href="#">Подбор недвижимости</a>
+							<a class="item" href="#">Оформление сделок под ключ</a>						
+							<a class="item" href="#">Оформление ипотеки</a>
+						</div>					
+					</li>
+				<li><a href="#" class="nav-link"><span>отзывы</span></a></li>
+				<li><a href="#" class="nav-link"><span>новости</span></a></li>
+				<li><a href="#" class="nav-link"><span>партнеры</span></a></li>
+				<li><a href="#" class="nav-link"><span>контакты</span></a></li>
 			</ul>
 		</nav>
 		<div class="head-teaser">
@@ -856,6 +888,34 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="column item flats">
+					<div class="ui segment">
+						<div class="pic">
+							<label class="type">новостройка</label>
+							<img src="https://52.img.avito.st/640x480/4831647152.jpg" alt="2-к квартира, 46 м², 2/5 эт.">
+						</div>
+						<div class="details">
+							<h3>2-к квартира, 46 м², 2/5 эт.</h3>
+							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Судостроительная улица, 6</span>
+							<div class="price">2 399 900 руб.</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="column item resale">
+					<div class="ui segment">
+						<div class="pic">
+							<label class="type">продажа</label>
+							<img src="https://82.img.avito.st/640x480/4657942882.jpg" alt="2-к квартира, 58.6 м², 2/9 эт.">
+						</div>
+						<div class="details">
+							<h3>2-к квартира, 58.6 м², 2/9 эт.</h3>
+							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Лесной проспект, 23</span>
+							<div class="price">2 646 000 руб.</div>
+						</div>
+					</div>					
+				</div>
 				
 			</div>
 			<button type="button" class="ui centered bg-hose wide">Другие варианты</button>
@@ -1115,7 +1175,17 @@
 		</div>
 	</section>
 	<section class="main-partners">
-		<div class="wrapper"></div>
+		<div class="wrapper">
+			<h2>наши партнеры</h2>
+			<ul class="twister">
+				<li class="partner vtb" data-content="ПАО ВТБ"></li> 
+				<li class="partner sber" data-content="ПАО Сбербанк"></li> 
+				<li class="partner sfk" data-content="Строительная компания СФК"></li> 
+				<li class="partner svbereg" data-content="Строительная компания Свой берег"></li> 
+				<li class="partner ksm" data-content="Строительная компания КСМ"></li>
+				<li class="partner gepard" data-content="Мебельный салон Гепард"></li> 
+			</ul>
+		</div>
 	</section>
 	<footer class="bg-gunmetal">
 		<div class="base twister">
