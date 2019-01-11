@@ -2970,9 +2970,10 @@ header .head-teaser .accent em {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 14px;
-  font-size: 22px;
-  content: '»';
+  top: 18px;
+  font-size: 18px;
+  font-family: "FontAwesome";
+  content: '\f101';
 }
 .main-about .accent {
   font-size: 1.5rem;
@@ -3239,13 +3240,14 @@ footer .links li {
   position: relative;
 }
 footer .links li::before {
-  content: '»';
+  font-family: "FontAwesome";
+  content: '\f101';
   color: #b9baa3;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 20px;
   display: block;
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 0;
 }
 footer .links a {

@@ -741,14 +741,15 @@ header {
                 padding-left: 20px;
                 position: relative;
                 display: inline-block;
-                &::before {
+                &::before {                    
                     line-height: 1;
                     display: inline-block;
                     position: absolute;
                     left: 0;
-                    top: 14px;
-                    font-size: 22px;
-                    content: '»';
+                    top: 18px;
+                    font-size: 18px;
+                    font-family: "FontAwesome";
+                    content: '\f101';
                 }
             }
         }
@@ -986,14 +987,15 @@ footer {
             padding-left: 16px;
             position: relative;
             &::before {                
-                content: '»';
+                font-family: "FontAwesome";
+                content: '\f101';
                 color: @hose;
-                font-size: 20px;
+                font-size: 16px;
                 line-height: 20px;
                 display: block;
                 position: absolute;
-                top: 3px;
-                left: 0;                
+                top: 4px;
+                left: 0;
             }
         }
         a {
