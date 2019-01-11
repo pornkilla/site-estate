@@ -7,6 +7,7 @@
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
         realtyMenuItemHint = $('.head-search .selector .icon'),
+        socialIcons = $('.social-link'),
         scrollMeTop = $('#scroll-to-top');
 
         function mobileMenuInAction() {
@@ -268,6 +269,9 @@
                 hide: 400
             }
         }); 
+        socialIcons.popup({
+            position   : 'bottom center'
+        });
         
         // Glider slider
         $('.slider').glide({
