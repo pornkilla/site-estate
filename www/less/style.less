@@ -418,7 +418,8 @@ header {
                 height: 40px;
             }
             .avito {
-                .size(20px,20px);
+                .size(20px,
+                20px);
                 background-color: @gunmetal;
                 background-position: center center;
                 background-repeat: no-repeat;
@@ -858,23 +859,45 @@ header {
 }
 
 footer {
+    .left {
+        min-width: 100%;
+        .display(flex);
+        .flex-direction(column);
+        .justify-content(center);
+    }
+    .right {
+        .flex-wrap(wrap);
+    }
     .logo {
         .size(155px,
         126px);
+        margin-left: auto;
+        margin-right: auto;
+        background: url('../images/logo-vertical-smoke.svg') 0 0 no-repeat;
     }
     .social {
+        .display(flex);
+        .justify-content(center);
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
         .icon {
+            color: @hose;
+            font-size: 1.1rem;
+            text-align: center;
             display: inline-block;
+            margin-left: 18px;
+            margin-right: 18px;
             line-height: 30px;
             .border-radius(50%);
             .size(30px,
             30px);
             background-color: @gunmetal;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: 24px auto;
             &.avito {
                 background-image: url('../images/icon-avito.svg');
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 20px auto;
             }
         }
     }
@@ -885,10 +908,17 @@ footer {
         font-weight: 600;
     }
     .section {
+        .flex(1);
+        padding-left: 20px;
+        padding-right: 20px;
         margin-bottom: 2.5em;
+        text-align: left;
         a {
             color: @yellow;
         }
+    }
+    .about {
+        font-size: 0.75rem;
     }
     .category-links {
         a {
@@ -896,14 +926,29 @@ footer {
         }
     }
     .bottom {
+        &.wrapper {
+            padding: 1em;
+        }
         p,
         a {
             font-size: 0.75rem;
         }
     }
+    .divider {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
     .policy {
+        color: #999999;
         a {
             color: #ffffff;
+        }
+    }
+    .copy {
+        color: #aaaaaa;
+        p {
+            line-height: 2.5;
         }
     }
 }
