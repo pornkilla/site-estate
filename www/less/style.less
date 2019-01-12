@@ -326,7 +326,17 @@ a {
     overflow: visible;
     visibility: visible;
 }
-
+.text-left {
+    text-align: left;
+}
+.toolbar {
+    .breadcrumb {
+        padding: 10px 0;
+        a {
+            color: @gunmetal;
+        }
+    }
+}
 .liner {
     position: relative;
     padding-bottom: 0.75em;
@@ -474,6 +484,54 @@ header {
             }
         }
     }
+    .head-submenu {
+        .wrapper {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        ul {
+            .flexy;
+            .twister;
+            .align-items(flex-start);
+            & > li {
+                margin-bottom: 4px;
+            }
+        }
+        .link {
+            .flexy;
+             font-size: 0.875rem;            
+            .text, 
+            .count {
+                .border-radius(2);
+                padding: 10px 6px;
+                color: #ffffff;                
+            }
+            .text {
+                font-weight: 600;
+                .flex(1);
+                color: @gunmetal;                
+                background-color: rgba(255,255,255,0.4);
+            }            
+            .count {
+                font-weight: 200;                
+                margin-left: 2px;
+                min-width: 36px;
+                background-color: rgba(255,255,255,0.2);
+            }
+            &:hover {
+                .text {
+                    color: @nero;
+                    background-color: rgba(255,255,255,0.75);
+                }
+            }
+        }
+        .active {
+            .text {
+                color: #ffffff;
+                background-color: @hose-shade-dark;
+            }
+        }
+    }
     .logo {
         .flex(2);
         .order(2);
@@ -610,9 +668,10 @@ header {
         font-family: 'Fontello';
         font-style: normal;
         font-weight: normal;
-        speak: none;
+        // speak: none;
         display: inline-block;
         width: 1em;
+        margin-right: .4em;
         margin-right: .4em;
         text-align: center;
         font-variant: normal;

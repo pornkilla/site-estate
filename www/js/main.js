@@ -7,6 +7,7 @@
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
         realtyMenuItemHint = $('.head-search .selector .icon'),
+        logoHint = $('.logo'),
         popupHint = $('.hint'),
         partnersLogo = $('.partner'),
         socialIcons = $('.social-link'),
@@ -280,6 +281,9 @@
         });
         partnersLogo.popup({
             position   : 'top center'
+        });
+        logoHint.popup({
+            position: 'bottom center'
         });
         popupHint.popup();
         
