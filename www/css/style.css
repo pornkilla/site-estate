@@ -2341,7 +2341,7 @@ body {
 }
 body {
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 400;
   min-width: 320px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -2712,6 +2712,7 @@ header .logo {
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
+  cursor: pointer;
 }
 header .logo h1 {
   position: absolute;
@@ -2794,7 +2795,7 @@ header .head-teaser .accent em {
   padding-bottom: 20px;
 }
 .head-search label {
-  font-weight: 100;
+  font-weight: 200;
 }
 .head-search .selector {
   margin-top: -50px;
@@ -3253,7 +3254,7 @@ footer .links li::before {
 footer .links a {
   position: relative;
   font-size: 0.875rem;
-  font-weight: 100;
+  font-weight: 200;
   display: inline-block;
   padding-top: 8px;
   padding-bottom: 12px;
@@ -3352,6 +3353,7 @@ footer .copy p {
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+  font-weight: 400;
   font-size: 1rem;
   color: #2b303a;
   margin-bottom: 10px;
@@ -3388,6 +3390,7 @@ footer .copy p {
 }
 .realty.grid .item .pic.empty {
   text-align: center;
+  height: 170px;
 }
 .realty.grid .item .pic.empty::before {
   top: 50%;
@@ -3501,7 +3504,7 @@ footer .copy p {
   z-index: 9999;
   text-align: center;
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 200;
   position: fixed;
   cursor: pointer;
   line-height: 1.7;
@@ -3529,6 +3532,9 @@ footer .copy p {
   .realty.grid .item .pic {
     max-height: 300px;
   }
+  .realty.grid .item .pic.empty {
+    height: 210px;
+  }
 }
 @media (min-width: 36em) {
   header .head-teaser .pic {
@@ -3545,6 +3551,9 @@ footer .copy p {
   }
   .realty.grid .item .pic {
     max-height: 240px;
+  }
+  .realty.grid .item .pic.empty {
+    height: 240px;
   }
   .realty.grid .segment {
     margin-left: 10%;
@@ -3815,7 +3824,7 @@ footer .copy p {
     height: 350px;
   }
   .realty.grid .item .details {
-    min-height: 140px;
+    min-height: 180px;
   }
   .realty.grid .segment {
     margin-left: auto;
@@ -4009,6 +4018,9 @@ footer .copy p {
     visibility: visible;
     text-align: center;
     font-size: 0.75rem;
+  }
+  .realty.grid .item .details {
+    min-height: 140px;
   }
   footer .right .section {
     -webkit-flex-basis: 33.33%;

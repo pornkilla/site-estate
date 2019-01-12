@@ -19,6 +19,9 @@
             .item {
                 .pic {
                     max-height: 300px;
+                    &.empty {
+                        height: 210px;
+                    }
                 }
             }
         }
@@ -48,6 +51,9 @@
             .item {                
                 .pic {
                     max-height: 240px;
+                    &.empty {
+                        height: 240px;
+                    }
                 }
             }
             .segment {
@@ -243,7 +249,7 @@
                     }
                 }
                 .details {
-                    min-height: 140px;
+                    min-height: 180px;
                 }
             }
             .segment {
@@ -406,6 +412,15 @@
                 .visible;
                 text-align: center;
                 font-size: 0.75rem;
+            }
+        }
+    }
+    .realty {
+        &.grid {
+            .item {
+                .details {
+                    min-height: 140px;
+                }
             }
         }
     }

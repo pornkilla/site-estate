@@ -7,6 +7,7 @@
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
         realtyMenuItemHint = $('.head-search .selector .icon'),
+        popupHint = $('.hint'),
         partnersLogo = $('.partner'),
         socialIcons = $('.social-link'),
         scrollMeTop = $('#scroll-to-top');
@@ -26,6 +27,10 @@
         };
 
         redrawForms();
+
+        $('.head-main .logo').on('click', function () {
+            window.location = 'index.html';
+        });
 
         realtyMenuItem.on('click', function () {            
             if ($(this).hasClass('active') == true) {
@@ -276,6 +281,7 @@
         partnersLogo.popup({
             position   : 'top center'
         });
+        popupHint.popup();
         
         // Glider slider
         $('.slider').glide({
