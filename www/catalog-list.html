@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="css/style.css?2">	
 </head>
 
-<body class="catalog-list">
+<body class="page catalog-list">
 	<!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -154,10 +154,10 @@
 		</div>
 		
     </header>
-    <section class="toolbar padded-top padded-bottom">
-        <div class="wrapper bg-white text-left">
+    <section class="toolbar">
+        <div class="padded-left bg-white text-left padded-right">
             <div class="ui small breadcrumb">
-                <a class="section" href="/"><i class="fa fa-home"></i> Главная</a>
+                <a class="section home" href="/"><i class="fa fa-home"></i> Главная</a>
                 <i class="fa fa-fw fa-angle-right"></i>
                 <a class="section">Каталог</a>
                 <i class="fa fa-fw fa-angle-right"></i>
@@ -165,141 +165,504 @@
             </div>
         </div>
     </section>
-	<main class="main-offers bg-white">
-		<div class="wrapper">
-			<h2>Новые предложения</h2>
-			<div class="ui three column stackable grid container realty">
+    <section class="page-header text-left">
+        <div class="wrapper">
+            <h2 class="text-left"><small>недвижимость:</small>квартиры в новостройках</h2>
+            <div class="filter-panel bg-white cornered">
+                <div class="filters text-left">
+                    <span>фильтровать</span>
+                    <button type="button" class="clear">По цене <i class="fa fa-arrow-down"></i></button>                    
+                    <button type="button" class="clear">По площади <i class="fa fa-arrow-down"></i></button>                    
+                    <button type="button" class="clear">По алфавиту <i class="fa fa-arrow-down"></i></button>                    
+                </div>
+                <div class="view-mode switcher hidden">
+                    <button type="button" class="fa fa-th clear"></button>
+                    <button type="button" class="fa fa-th-list clear selected"></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="column item flats">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">новостройка</label>
-							<img src="https://52.img.avito.st/640x480/4831647152.jpg" alt="2-к квартира, 46 м², 2/5 эт.">
-						</div>
-						<div class="details">
-							<h3>2-к квартира, 46 м², 2/5 эт.</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Судостроительная улица, 6</span>
-							<div class="price">2 399 900 руб.</div>
-						</div>
-					</div>
-				</div>
+	<section class="innerpage">
+		<div class="wrapper twister">
+            <div class="content-column">
+                <div class="ui one column stackable list realty">
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">
+                                <img src="https://52.img.avito.st/640x480/4831647152.jpg" alt="2-к квартира, 46 м², 2/5 эт.">
+                            </div>
+                            <div class="details">                                
+                                <div class="special">                                    
+                                    <h3>2-к квартира, 46 м², 2/5 эт.</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Судоcудоcудоcудостроительная улица, 6</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>СК "Альфа-Строй"</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>монолитный</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>5 / 5</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>31,6</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">2 399 900 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                                
+                                <img src="https://82.img.avito.st/640x480/4657942882.jpg" alt="2-к квартира, 58.6 м², 2/9 эт.">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>2-к квартира, 58.6 м², 2/9 эт.</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Лесной проспект, 23</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>ООО "Стройинвест КСМ"</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>панельный</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>2 / 5</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>53,6</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">3 152 000 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                                
+                                <img src="https://42.img.avito.st/640x480/4268385242.jpg" alt="5-к квартира, 113 м², 4/5 эт.">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>5-к квартира, 113 м², 4/5 эт.</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Нойбранденбургская улица, 16</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>ООО "Стройинвест КСМ"</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>панельный</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>5 / 5</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>53,6</p>
+                                    </div>
+                                </div>
+                                <div class="price">3 152 000 руб.</div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic empty">
+                                <img src="images/spacer.gif" alt="">                                
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>Дом (Финляндия)</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, р-н Перевалка, Savonlinna</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>&mdash;</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>&mdash;</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>1 / 1</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>234,2</p>
+                                    </div>
+                                </div> 
+                                <div class="price">
+                                    <span class="value">63 000 000 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                                
+                                <img src="https://49.img.avito.st/640x480/4920886949.jpg" alt="Помещение свободного назначения, 500 м²">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>Помещение свободного назначения, 500 м²</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>ул. Бумажников, 12А, Кондопога</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>&mdash;</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>&mdash;</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>1 / 2</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>87,4</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">35 000 000 руб.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                                
+                                <img src="https://81.img.avito.st/640x480/4397388781.jpg" alt="Торговое помещение в центре">
+                            </div>
+                            <div class="details">
+                               <div class="special">
+                                    <h3>Торговое помещение в центре</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, р-н Центр, ул Красная</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>&mdash;</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>&mdash;</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>1</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>134,76</p>
+                                    </div>
+                               </div>
+                                <div class="price">
+                                    <span class="value">199 900 руб. в месяц</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                                
+                                <img src="https://59.img.avito.st/640x480/4637253959.jpg" alt="Участок 11.5 сот. (СНТ, ДНП)">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>Участок 11.5 сот. (СНТ, ДНП)</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Республика Карелия, Кондопожский район, садовые участки</span>
+                                        <div class="info-box">
+                                            <p><small>Застройщик:</small>&mdash;</p>
+                                        </div>
+                                        <div class="info-box ui two column grid">
+                                            <div class="column">
+                                                <p><small>Тип дома:</small>&mdash;</p>
+                                            </div>
+                                            <div class="column">
+                                                <p><small>Этаж:</small>1</p>
+                                            </div>
+                                        </div>
+                                        <div class="info-box">
+                                            <p><small>Площадь, м2:</small>88,6</p>
+                                        </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">2 399 900 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">                               
+                                <img src="https://52.img.avito.st/640x480/4831647152.jpg" alt="2-к квартира, 46 м², 2/5 эт.">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>2-к квартира, 46 м², 2/5 эт.</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Судостроительная улица, 6</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>&mdash;</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>&mdash;</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>1</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>120,6</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">2 399 900 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="column item flats">
+                        <div class="ui segment">
+                            <div class="pic">
+                                <img src="https://82.img.avito.st/640x480/4657942882.jpg" alt="2-к квартира, 58.6 м², 2/9 эт.">
+                            </div>
+                            <div class="details">
+                                <div class="special">
+                                    <h3>2-к квартира, 58.6 м², 2/9 эт.</h3>
+                                    <span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Лесной проспект, 23</span>
+                                    <div class="info-box">
+                                        <p><small>Застройщик:</small>ООО "Стройинвест КСМ"</p>
+                                    </div>
+                                    <div class="info-box ui two column grid">
+                                        <div class="column">
+                                            <p><small>Тип дома:</small>панельный</p>
+                                        </div>
+                                        <div class="column">
+                                            <p><small>Этаж:</small>2 / 5</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-box">
+                                        <p><small>Площадь, м2:</small>53,6</p>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <span class="value">3 152 000 руб.</span>
+                                    <a href="#" class="credit">Ипотека по ставке<br>от <em>8,9%</em></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
 
-				<div class="column item resale">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">продажа</label>
-							<img src="https://82.img.avito.st/640x480/4657942882.jpg" alt="2-к квартира, 58.6 м², 2/9 эт.">
-						</div>
-						<div class="details">
-							<h3>2-к квартира, 58.6 м², 2/9 эт.</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Лесной проспект, 23</span>
-							<div class="price">2 646 000 руб.</div>
-						</div>
-					</div>					
-				</div>
+                <div class="ui pagination menu">
+                    <a class="active item">
+                        1
+                    </a>
+                    <div class="disabled item">
+                        ...
+                    </div>
+                    <a class="item">
+                        10
+                    </a>
+                    <a class="item">
+                        11
+                    </a>
+                    <a class="item">
+                        12
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar">
+                <div class="ui form bg-white cornered search-panel basic-shadow">
+                    <form id="form-search-flats">
 
-				<div class="column item country">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">дом/коттедж</label>
-							<img src="https://42.img.avito.st/640x480/4268385242.jpg" alt="5-к квартира, 113 м², 4/5 эт.">
-						</div>
-						<div class="details">
-							<h3>5-к квартира, 113 м², 4/5 эт.</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Нойбранденбургская улица, 16</span>
-							<div class="price">6 987 000 руб.</div>
-						</div>
-					</div>					
-				</div>
+                        <div class="form-item ranger">
+                            <label>Площадь, м<sup>2</sup></label>
+                            <div id="ranger-flats-meters" class="ui double red range"></div>
+                            <div class="flexy">
+                                <div class="field first">
+                                    <input type="number" id="range-min-flats-meters" name="min" value="0.5">
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="field last">
+                                    <input type="number" id="range-max-flats-meters" name="max">
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="column item exclusive">
-					<div class="ui segment">
-						<div class="pic empty">
-							<img src="images/spacer.gif" alt="">
-							<label class="type">эксклюзив</label>							
-						</div>
-						<div class="details">
-							<h3>Дом (Финляндия)</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, р-н Перевалка, Savonlinna</span>
-							<div class="price">63 000 000 руб.</div>
-						</div>	
-					</div>					
-				</div>
+                        <div class="ui hidden divider"></div>
 
-				<div class="column item commerce">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">бизнес</label>
-							<img src="https://49.img.avito.st/640x480/4920886949.jpg" alt="Помещение свободного назначения, 500 м²">
-						</div>
-						<div class="details">
-							<h3>Помещение свободного назначения, 500 м²</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>ул. Бумажников, 12А, Кондопога</span>
-							<div class="price">35 000 000 руб.</div>
-						</div>
-					</div>
-				</div>
+                        <div class="form-item ranger">
+                            <label for="">Стоимость, млн. руб.</label>
+                            <div id="ranger-flats" class="ui double red range"></div>
+                            <div class="flexy">
+                                <div class="field first">
+                                    <input type="number" id="range-min-flats" name="min" value="1.5">
+                                </div>
+                                <div class="spacer"></div>
+                                <div class="field last">
+                                    <input type="number" id="range-max-flats" name="max">
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="column item rent">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">аренда</label>
-							<img src="https://81.img.avito.st/640x480/4397388781.jpg" alt="Торговое помещение в центре">
-						</div>
-						<div class="details">
-							<h3>Торговое помещение в центре</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, р-н Центр, ул Красная</span>
-							<div class="price">199 900 руб. в месяц</div>
-						</div>
-					</div>
-				</div>
-				
-				<div class="column item land">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">земля</label>
-							<img src="https://59.img.avito.st/640x480/4637253959.jpg" alt="Участок 11.5 сот. (СНТ, ДНП)">
-						</div>
-						<div class="details">
-							<h3>Участок 11.5 сот. (СНТ, ДНП)</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Республика Карелия, Кондопожский район, садовые участки</span>
-							<div class="price">300 000 руб.</div>
-						</div>
-					</div>
-				</div>
+                        <div class="ui hidden divider"></div>
 
-				<div class="column item flats">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">новостройка</label>
-							<img src="https://52.img.avito.st/640x480/4831647152.jpg" alt="2-к квартира, 46 м², 2/5 эт.">
-						</div>
-						<div class="details">
-							<h3>2-к квартира, 46 м², 2/5 эт.</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Судостроительная улица, 6</span>
-							<div class="price">2 399 900 руб.</div>
-						</div>
-					</div>
-				</div>
+                        <div class="form-item field">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="developer">
+                                <div class="default text">Застройщик</div>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="developer-all" data-text="Все застройщики">
+                                        Все застройщики
+                                    </div>
+                                    <div class="item" data-value="developer-1" data-text="Строительная компания ВЕК">
+                                        Строительная компания ВЕК
+                                    </div>
+                                    <div class="item" data-value="developer-2" data-text="ООО КСМ">
+                                        ООО КСМ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				<div class="column item resale">
-					<div class="ui segment">
-						<div class="pic">
-							<label class="type">продажа</label>
-							<img src="https://82.img.avito.st/640x480/4657942882.jpg" alt="2-к квартира, 58.6 м², 2/9 эт.">
-						</div>
-						<div class="details">
-							<h3>2-к квартира, 58.6 м², 2/9 эт.</h3>
-							<span class="location"><i class="fa fa-map-marker"></i>Петрозаводск, Лесной проспект, 23</span>
-							<div class="price">2 646 000 руб.</div>
-						</div>
-					</div>					
-				</div>
-				
-			</div>
-			<button type="button" class="ui centered bg-hose wide">Другие варианты</button>
+                        <div class="form-item field">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="date-end">
+                                <div class="default text">Срок сдачи</div>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="date-end-any" data-text="Срок сдачи: любой">
+                                        Срок сдачи: любой
+                                    </div>
+                                    <div class="item" data-value="date-end-2020" data-text="Срок сдачи: 2020">
+                                        Срок сдачи: 2020
+                                    </div>
+                                    <div class="item" data-value="date-end-2019" data-text="Срок сдачи: 2019">
+                                        Срок сдачи: 2019
+                                    </div>
+                                    <div class="item" data-value="date-end-2018" data-text="Срок сдачи: 2018">
+                                        Срок сдачи: 2018
+                                    </div>
+                                    <div class="item" data-value="date-end-2017" data-text="Срок сдачи: 2017">
+                                        Срок сдачи: 2017
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item field">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="rooms">
+                                <div class="default text">Количество комнат</div>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="rooms-any" data-text="Любое количество комнат">
+                                        Любое количество комнат
+                                    </div>
+                                    <div class="item" data-value="rooms-1" data-text="1 комната">
+                                        1 комната
+                                    </div>
+                                    <div class="item" data-value="rooms-2" data-text="2 комнаты">
+                                        2 комнаты
+                                    </div>
+                                    <div class="item" data-value="rooms-3" data-text="3 комнаты">
+                                        3 комнаты
+                                    </div>
+                                    <div class="item" data-value="rooms-4" data-text="4 комнаты и больше">
+                                        4 комнаты и больше
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ui hidden divider"></div>
+
+                        <div class="form-item field">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="town">
+                                <div class="default text">Город</div>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="town-any" data-text="Любой город">
+                                        Любой город
+                                    </div>
+                                    <div class="item" data-value="town-1" data-text="Петрозаводск">
+                                        Петрозаводск
+                                    </div>
+                                    <div class="item" data-value="town-2" data-text="Кондопога">
+                                        Кондопога
+                                    </div>
+                                    <div class="item" data-value="town-3" data-text="Сортавала">
+                                        Сортавала
+                                    </div>
+                                    <div class="item" data-value="town-4" data-text="Костомукша">
+                                        Костомукша
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-item field">
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="district">
+                                <div class="default text">Район</div>
+                                <i class="fa fa-angle-down"></i>
+                                <div class="menu">
+                                    <div class="item" data-value="district-all" data-text="Все районы">
+                                        Все районы
+                                    </div>
+                                    <div class="item" data-value="district-1" data-text="Кукковка">
+                                        Кукковка
+                                    </div>
+                                    <div class="item" data-value="district-2" data-text="Древлянка">
+                                        Древлянка
+                                    </div>
+                                    <div class="item" data-value="district-3" data-text="Центр">
+                                        Центр
+                                    </div>
+                                    <div class="item" data-value="district-4" data-text="Ключевая">
+                                        Ключевая
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="expand-collapse text-left">
+                            <a href="#">
+                                <i class="fa fa-plus-circle"></i> Расширенные параметры
+                            </a>
+                        </div>
+
+                        <div class="ui hidden divider"></div>
+
+                        <button type="button" class="bg-red">Найти</button>
+
+                    </form>
+                </div>
+            </div>
 		</div>
-    </main>
+    </section>
 
     <section class="support-white">
         <div class="wrapper">
@@ -319,7 +682,21 @@
             </form>
         </div>
     </section>
-	
+    
+    <section class="main-partners">
+        <div class="wrapper">
+            <h2>наши партнеры</h2>
+            <ul class="twister">
+                <li class="partner vtb" data-content="ПАО ВТБ"></li>
+                <li class="partner sber" data-content="ПАО Сбербанк"></li>
+                <li class="partner sfk" data-content="Строительная компания СФК"></li>
+                <li class="partner svbereg" data-content="Строительная компания Свой берег"></li>
+                <li class="partner ksm" data-content="Строительная компания КСМ"></li>
+                <li class="partner gepard" data-content="Мебельный салон Гепард"></li>
+            </ul>
+        </div>
+    </section>
+
 	<footer class="bg-gunmetal">
 		<div class="base twister">
 			<div class="left wrapper bg-nero">

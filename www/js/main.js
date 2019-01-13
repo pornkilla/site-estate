@@ -101,6 +101,22 @@
                 $('#range-max-flats').val(firstVal);
             }
         });
+        $('#ranger-flats-meters').range({
+            min: 10,
+            max: 300,
+            start: 300,
+            step: 1,
+            verbose: true,
+            debug: true,
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
+                $('#range-min-flats-meters').val(secVal);
+                $('#range-max-flats-meters').val(firstVal);
+            }
+        });
         $('#ranger-resale').range({
             min: 0.5,
             max: 30,

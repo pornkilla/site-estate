@@ -16,12 +16,10 @@
     }
     .realty {
         &.grid {
-            .item {
-                .pic {
-                    max-height: 300px;
-                    &.empty {
-                        height: 210px;
-                    }
+            .pic {
+                max-height: 300px;
+                &.empty {
+                    height: 210px;
                 }
             }
         }
@@ -48,12 +46,10 @@
     }
     .realty {
         &.grid {
-            .item {                
-                .pic {
-                    max-height: 240px;
-                    &.empty {
-                        height: 240px;
-                    }
+            .pic {
+                max-height: 240px;
+                &.empty {
+                    height: 240px;
                 }
             }
             .segment {
@@ -80,6 +76,10 @@
 
 //*** Screen 768+
 @media (min-width: 48em) {
+    .toolbar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
     header {
         .head-top {
             padding-left: 1rem;
@@ -204,7 +204,7 @@
     .head-search {
         .wrapper {
             max-width: 770px;
-        }
+        }        
         .selector {
             margin-top: -74px;
             .items {
@@ -260,29 +260,7 @@
                 }
             }
         }
-    }
-    .realty {
-        &.grid {
-            .item {                
-                .pic {
-                    img {
-                        min-width: auto;
-                        min-height: auto;
-                        max-width: initial;
-                        max-height: initial;
-                        height: 350px;
-                    }
-                }
-                .details {
-                    min-height: 180px;
-                }
-            }
-            .segment {
-                margin-left: auto;
-                margin-right: auto;
-            }
-        }
-    }
+    }    
     .main-services {
         .liner {
             text-align: left;
@@ -337,10 +315,7 @@
         .guild {
             margin-bottom: 3rem;
         }
-    }
-    .twister {
-        .flex-direction(row);
-    }
+    }    
     .main-how {
         padding-top: 0;
         &.bg-how {
@@ -370,6 +345,50 @@
         }
         .reverse {
             .flex-direction(row-reverse);
+        }
+    }
+    .twister {
+        .flex-direction(row);
+    }
+    .realty {
+        &.list {
+            
+        }
+        &.grid {
+            .pic {
+                img {
+                    min-width: auto;
+                    min-height: auto;
+                    max-width: initial;
+                    max-height: initial;
+                    height: 350px;
+                }
+            }
+            .details {
+                min-height: 180px;
+            }
+            .segment {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+    .innerpage {
+         .wrapper {
+            .align-items(flex-start);
+        }    
+        .sidebar {
+            .order(1);
+            margin-top: 0;
+        }
+        .search-panel {
+            width: 320px;            
+        }
+        .content-column {
+            .flex(1);
+            .order(2);
+            margin-left: 20px;
+             text-align: left;
         }
     }
     footer {
@@ -404,7 +423,8 @@
         .head-teaser {
             height: 534px;
             .pic {
-                bottom: 60px;
+                bottom: 40px;
+                left: 80px;
             }
             .text {
                 width: 36%;
@@ -419,8 +439,7 @@
         }
         .head-nav {
             display: block;
-            margin: 0 auto;
-            max-width: 1120px;
+            margin: 0 auto;            
             text-align: center;
             left: 0;
             right: 0;
@@ -459,11 +478,51 @@
                 }
             }
         }
+        &.list {
+            .segment {
+                padding: 0;
+                .display(flex);
+                .flex-direction(row);
+                .flex-wrap(nowrap);                
+                .align-items(stretch);
+            }
+            .pic {
+                min-height: 310px;
+                width: 40%;
+                min-width: auto;
+                margin: 0;
+                img {
+                    min-width: auto;
+                    min-height: auto;
+                    max-width: 450px;
+                }
+            }
+            .details {
+                width: 55%;
+                padding-right: 20px;
+                .flex-grow(1);
+                padding-left: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;                
+                .display(flex);
+                .flex-direction(column);
+                .justify-content(space-around);
+            }
+            .special {
+                .flex(1);
+            }
+        }
+    }
+    .content-column {
+        width: 564px;
     }
     footer {        
         .right {
+            .flex(1);
             .section {
                 .flex-basis(33.33%);
+                padding-left: 4%;
+                padding-right: 4%;
             }
         }
     }
@@ -486,13 +545,28 @@
                 padding-right: 0;
             }
             ul > li {
+                width: 25%;
                 padding: 0 10px 0 20px;
             }
-        }            
+        }
+        .head-teaser {            
+            .circle {
+                width: 680px;
+                height: 680px;
+                bottom: -330px;
+            }
+        }
     }
     .head-search {
+        .size-limiter;
+        margin-left: auto;
+        margin-right: auto;
         .wrapper {
             .size-limiter;
+        }
+        .form-container {
+            height: 175px;
+            // overflow: hidden;
         }
         .selector {
             .items {
@@ -520,6 +594,16 @@
     section {
         .wrapper {
             .size-limiter;
+        }
+    }
+    .toolbar {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .main-offers {
+        .wrapper {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
