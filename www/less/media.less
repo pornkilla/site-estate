@@ -588,6 +588,7 @@
 
         &.list {
             .segment {
+                max-height: 320px;
                 padding: 0;
                 .display(flex);
                 .flex-direction(row);
@@ -606,6 +607,10 @@
                     min-height: auto;
                     max-width: 450px;
                 }
+            }
+
+            .location + .info-box {
+                padding-top: 12px;
             }
 
             .details {
@@ -753,6 +758,19 @@
         .wrapper {
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+
+    .realty {
+        &.list {
+            .info-box {
+                p {                    
+                    margin-bottom: 1em;
+                }
+            }
+            .price {
+                min-height: 50px;
+            }
         }
     }
 

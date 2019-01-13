@@ -1355,9 +1355,37 @@ footer {
 
 .filter-panel {
     .flexy;
+    font-size: 0.875rem;
+
+    .buttons-panel {
+        border-left: @hose 1px solid;
+        padding-left: 1.5em;
+            button {
+                font-size: inherit;
+                font-weight: 600;
+                text-transform: unset;
+                &:active {
+                    background-color: @smoky;
+                }
+            }
+        }
 
     .filters {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        .flexy;
+        .v-centered;
+        label {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
         .flex(1);
+        
+        .fa {
+            margin-left: 5px;
+            font-size: 0.75rem;
+            color: @red;
+        }
     }
 }
 
@@ -1619,13 +1647,14 @@ footer {
             font-weight: 600;
         }
 
-        .location+.info-box {
-            padding-top: 24px;
+        .location + .info-box {
+            padding-top: 6px;
         }
 
         .info-box {
             p {
                 text-align: left;
+                margin-bottom: 0.5em;
             }
         }
 

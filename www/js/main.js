@@ -7,6 +7,7 @@
         menuBox = $('#menu-main'),
         realtyMenuItem = $('.head-search .selector .items li'),
         realtyMenuItemHint = $('.head-search .selector .icon'),
+        sorterButton = $('.filter-panel .toggler'),
         logoHint = $('.logo'),
         popupHint = $('.hint'),
         partnersLogo = $('.partner'),
@@ -33,6 +34,9 @@
             window.location = 'index.html';
         });
 
+        sorterButton.on('click', function () {
+            $(this).find('.fa').toggleClass('fa-arrow-down fa-arrow-up');
+        });            
         realtyMenuItem.on('click', function () {            
             if ($(this).hasClass('active') == true) {
                return;

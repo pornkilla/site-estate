@@ -172,10 +172,12 @@
             <h2 class="text-left"><small>недвижимость:</small>квартиры в новостройках</h2>
             <div class="filter-panel bg-white cornered">
                 <div class="filters text-left">
-                    <span>фильтровать</span>
-                    <button type="button" class="clear">По цене <i class="fa fa-arrow-down"></i></button>
-                    <button type="button" class="clear">По площади <i class="fa fa-arrow-down"></i></button>
-                    <button type="button" class="clear">По алфавиту <i class="fa fa-arrow-down"></i></button>
+                    <label>Сортировать</label>
+                    <div class="buttons-panel">
+                        <button type="button" class="toggler clear">По цене<i class="fa fa-arrow-down"></i></button>
+                        <button type="button" class="toggler clear">По площади<i class="fa fa-arrow-down"></i></button>
+                        <button type="button" class="toggler clear">По алфавиту<i class="fa fa-arrow-down"></i></button>
+                    </div>
                 </div>
                 <div class="view-mode switcher hidden">
                     <button type="button" class="fa fa-th clear"></button>
@@ -281,7 +283,9 @@
                                         <p><small>Площадь, м2:</small>53,6</p>
                                     </div>
                                 </div>
-                                <div class="price">3 152 000 руб.</div>
+                                <div class="price">
+                                    <span class="value">3 152 000 руб.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -687,9 +691,9 @@
                         <div class="field">
                             <input placeholder="Телефон" type="text" required>
                         </div>
-                    </div>
+                    </div>                
                     <button type="button" class="ui centered bg-hose wide">Отправить</button>
-                </div>                
+                </div>
             </form>
         </div>
     </section>
