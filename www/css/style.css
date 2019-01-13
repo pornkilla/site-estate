@@ -4351,6 +4351,9 @@ footer .copy p {
     overflow: hidden;
     visibility: hidden;
   }
+  header .head-main .wrapper {
+    max-width: 1210px;
+  }
   header .head-submenu .wrapper {
     padding: 90px 10px 20px 40px;
   }
@@ -4365,9 +4368,15 @@ footer .copy p {
     bottom: 40px;
     left: 80px;
   }
+  header .head-teaser .circle {
+    width: 560px;
+    height: 560px;
+    left: 35px;
+    bottom: -200px;
+  }
   header .head-teaser .text {
     width: 36%;
-    padding-top: 105px;
+    padding-top: 140px;
   }
   header .head-teaser .text .accent {
     font-size: 3rem;
@@ -4541,7 +4550,11 @@ footer .copy p {
     width: 25%;
     padding: 0 10px 0 20px;
   }
+  header .head-teaser .pic {
+    left: 8%;
+  }
   header .head-teaser .circle {
+    left: 2%;
     width: 680px;
     height: 680px;
     bottom: -330px;
@@ -4596,6 +4609,14 @@ footer .copy p {
   }
   .support-white .shifter {
     margin-right: 24%;
+  }
+}
+@media (min-width: 120em) {
+  header .head-teaser .pic {
+    left: 22%;
+  }
+  header .head-teaser .circle {
+    left: 16%;
   }
 }
 @media (min-width: 20em) and (max-width: 48em) {

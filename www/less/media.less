@@ -513,7 +513,11 @@
         .burger {
             .hidden;
         }
-
+        .head-main {
+            .wrapper {
+                max-width: 1210px;
+            }
+        }
         .head-submenu {
             .wrapper {
                 padding: 90px 10px 20px 40px;
@@ -535,9 +539,16 @@
                 left: 80px;
             }
 
+            .circle {
+                width: 560px;
+                height: 560px;
+                left: 35px;
+                bottom: -200px;
+            }
+
             .text {
                 width: 36%;
-                padding-top: 105px;
+                padding-top: 140px;
 
                 .accent {
                     font-size: 3rem;
@@ -700,7 +711,11 @@
         }
 
         .head-teaser {
+            .pic {
+                left: 8%;
+            }
             .circle {
+                left: 2%;
                 width: 680px;
                 height: 680px;
                 bottom: -330px;
@@ -800,7 +815,18 @@
 }
 
 //*** Screen 1920+
-@media (min-width: 120em) {}
+@media (min-width: 120em) {
+    header {
+        .head-teaser {
+            .pic {
+                left: 22%;
+            }
+            .circle {
+                left: 16%;
+            }
+        }
+    }
+}
 
 // Only mobile
 @media (min-width: 20em) and (max-width: 48em) {
