@@ -3536,6 +3536,30 @@ footer .copy p {
 .toolbar .breadcrumb .active.section {
   font-weight: 200;
 }
+.price {
+  color: #be1d2d;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.price .credit {
+  color: #2b303a;
+  font-weight: 200;
+  font-size: 0.75rem;
+  text-align: right;
+}
+.price .credit em {
+  font-size: 1.125rem;
+}
+.info-box p {
+  font-size: 0.875rem;
+  font-weight: 200;
+  margin-bottom: 1em;
+}
+.info-box p small {
+  display: block;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
 .realty h3 {
   font-weight: 400;
   font-size: 1rem;
@@ -3554,9 +3578,6 @@ footer .copy p {
   font-size: 0.75rem;
 }
 .realty .price {
-  color: #be1d2d;
-  font-size: 1.125rem;
-  font-weight: 600;
   border-top: #b9baa3 1px solid;
   padding-top: 10px;
   margin-top: 10px;
@@ -3564,15 +3585,6 @@ footer .copy p {
 .realty .price .value {
   text-align: left;
   line-height: 2.15;
-}
-.realty .price .credit {
-  color: #2b303a;
-  font-weight: 200;
-  font-size: 0.75rem;
-  text-align: right;
-}
-.realty .price .credit em {
-  font-size: 1.125rem;
 }
 .realty .location {
   font-size: 0.875rem;
@@ -3587,16 +3599,6 @@ footer .copy p {
   left: 0;
   top: 0;
   margin-right: 5px;
-}
-.realty .info-box p {
-  font-size: 0.875rem;
-  font-weight: 200;
-  margin-bottom: 1em;
-}
-.realty .info-box p small {
-  display: block;
-  font-weight: 600;
-  font-size: 0.75rem;
 }
 .realty .pic {
   position: relative;
@@ -3818,6 +3820,23 @@ footer .copy p {
 .gallery .accent {
   position: relative;
 }
+.gallery .navi-arrows .arrow {
+  font-size: 2rem;
+  color: #8e8f7d;
+  position: absolute;
+  display: block;
+  z-index: 3;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gallery .navi-arrows .arrow.left {
+  left: 0;
+}
+.gallery .navi-arrows .arrow.right {
+  right: 0;
+}
 .gallery .images {
   display: -webkit-box;
   display: -moz-box;
@@ -3834,11 +3853,14 @@ footer .copy p {
   align-items: center;
   margin: 10px 0;
 }
-.gallery .images img {
-  margin: 0 20px 10px 0;
-}
-.gallery .images img.active {
+.gallery .images .active {
   border: #00a8ff 2px solid;
+}
+.gallery .images img {
+  margin: 0;
+}
+.gallery .images a {
+  margin: 0 10px 10px 0;
 }
 .gallery .slider-arrow {
   opacity: 0.8;
@@ -3858,6 +3880,22 @@ footer .copy p {
 .catalog-details .page-header .wrapper {
   padding-bottom: 1em;
 }
+.catalog-details .page-header .inner-nav {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.catalog-details .page-header .developer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+}
+.catalog-details .page-header .developer strong {
+  display: block;
+  font-size: 1rem;
+  padding-top: 5px;
+}
 .catalog-details .object-location {
   margin-top: 2em;
 }
@@ -3865,11 +3903,72 @@ footer .copy p {
   font-size: 2rem;
   padding-bottom: 0.25em;
 }
+.catalog-details .object-specs {
+  margin-top: 0;
+}
+.catalog-details .object-specs .order button {
+  width: 100%;
+}
+.catalog-details .object-features {
+  margin-bottom: 2em;
+}
+.catalog-details .object-features table td {
+  font-size: 0.75rem;
+}
 .catalog-details .first .wrapper {
   padding: 10px;
+  padding-bottom: 50px;
 }
 .catalog-details .map {
   margin-bottom: 0;
+}
+.catalog-details .credit {
+  font-size: 0.75rem;
+  padding-right: 48px;
+  position: relative;
+  width: 100%;
+}
+.catalog-details .credit a {
+  color: inherit;
+}
+.catalog-details .credit p {
+  text-align: left;
+}
+.catalog-details .credit em {
+  font-size: 1.4em;
+}
+.catalog-details .credit.sber::before {
+  position: absolute;
+  right: 8px;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  content: '';
+  width: 36px;
+  height: 36px;
+  background: url(../images/logo_sber.png) center 8% no-repeat;
+  background-size: 50px;
+}
+.promo {
+  position: relative;
+}
+.promo.spb {
+  width: 100%;
+  height: 480px;
+  background-image: url('../images/pic_spb-small.png'), url('../images/bg_spb-small.jpg');
+  background-position: 70px 100px, -181px center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, auto 100%;
+}
+.promo.spb a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 .support-white {
   min-height: 300px;
@@ -3885,6 +3984,16 @@ footer .copy p {
 }
 .support-white .form {
   margin-bottom: 20px;
+}
+.support-white .form input[type="text"],
+.support-white .form textarea {
+  border-color: #b9baa3;
+}
+.support-white .form input[type="text"],
+.support-white .form textarea,
+.support-white .form input[type="text"]::placeholder,
+.support-white .form textarea::placeholder {
+  color: #b9baa3;
 }
 .support-white .shifter {
   max-width: 280px;
@@ -3969,6 +4078,14 @@ footer .copy p {
   .support-white .shifter {
     margin-top: 100px;
     margin-right: 5%;
+  }
+  .support-white.alt {
+    background-position: 90% bottom, center center;
+    background-size: auto 315px, auto 100%;
+  }
+  .support-white.alt .shifter {
+    margin-right: auto;
+    margin-left: 5%;
   }
 }
 @media (min-width: 48em) {
@@ -4430,16 +4547,56 @@ footer .copy p {
     padding-left: 45px;
     padding-right: 45px;
   }
-  .catalog-details .details .wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
+  .catalog-details .page-header .developer {
+    width: 250px;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 12px;
   }
-  .catalog-details .gallery {
-    max-width: 90%;
+  .catalog-details .page-header .developer strong {
+    padding-top: 1rem;
+  }
+  .catalog-details .page-header .inner-nav {
+    text-align: left;
+    position: relative;
+    padding-left: 80px;
+  }
+  .catalog-details .page-header .inner-nav h3 {
+    margin-top: 0;
+  }
+  .catalog-details .page-header .inner-nav .object-location {
+    margin-top: 10px;
+  }
+  .catalog-details .page-header .inner-nav .object-location .icon {
+    display: inline-block;
+    font-size: 1rem;
+    margin-right: 5px;
+  }
+  .catalog-details .page-header .inner-nav .button {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .catalog-details .details .wrapper {
+    padding: 50px;
+    padding-top: 0;
+  }
+  .catalog-details .details .sidebar {
+    margin-left: 50px;
   }
   .catalog-details .gallery,
   .catalog-details .object-specs {
     margin-top: 50px;
+  }
+  .catalog-details .object-specs .aside {
+    width: 220px;
+  }
+  .catalog-details .object-specs .info-box,
+  .catalog-details .object-specs .info-box p {
+    text-align: left;
+  }
+  .catalog-details .object-specs .info-box p {
+    margin-bottom: 5px;
   }
   .support-white {
     background-size: auto 350px;
@@ -4447,6 +4604,23 @@ footer .copy p {
   }
   .support-white .shifter {
     margin-right: 12%;
+  }
+  .support-white.alt {
+    background-position: 80% bottom, center center;
+    background-size: auto 425px, auto 100%;
+  }
+  .support-white.alt h2 {
+    left: 17%;
+    max-width: 400px;
+    text-align: left;
+    position: absolute;
+    top: 145px;
+    font-size: 2.5rem;
+  }
+  .support-white.alt .shifter {
+    margin-right: auto;
+    margin-left: 15%;
+    margin-top: 245px;
   }
   footer .left {
     min-width: 320px;
@@ -4635,6 +4809,9 @@ footer .copy p {
     margin-top: 200px;
     margin-right: 18%;
   }
+  .support-white.alt {
+    background-position: 67% bottom, center center;
+  }
   footer .right {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -4706,6 +4883,18 @@ footer .copy p {
     padding-left: 0;
     padding-right: 0;
   }
+  .catalog-details .page-header .developer {
+    width: 270px;
+  }
+  .catalog-details .details .gallery {
+    width: auto;
+    margin-left: 50px;
+    margin-right: 0;
+  }
+  .catalog-details .details .sidebar {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
   .realty.list:not(.aside) .info-box p {
     margin-bottom: 1em;
   }
@@ -4721,6 +4910,13 @@ footer .copy p {
   }
   .support-white .shifter {
     margin-right: 24%;
+  }
+  .support-white.alt {
+    background-position: 70% bottom, center center;
+    background-size: auto 495px, auto 100%;
+  }
+  .support-white.alt h2 {
+    left: 16%;
   }
 }
 @media (min-width: 120em) {
