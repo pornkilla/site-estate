@@ -3738,6 +3738,11 @@ footer .copy p {
 .catalog-list .innerpage .wrapper {
   padding-top: 0.5rem;
 }
+.support-white {
+  min-height: 300px;
+  background: #ffffff url('../images/bg_assistance.jpg') center bottom no-repeat;
+  background-size: auto 275px;
+}
 #scroll-to-top {
   width: 40px;
   height: 40px;
@@ -3807,6 +3812,10 @@ footer .copy p {
   }
   .main-reviews .slider .slider-arrow {
     bottom: 50%;
+  }
+  .support-white {
+    background-position-x: 25%;
+    background-size: auto 300px;
   }
 }
 @media (min-width: 48em) {
@@ -4414,6 +4423,9 @@ footer .copy p {
   }
   .content-column {
     width: 564px;
+  }
+  .support-white {
+    background-size: auto 700px;
   }
   footer .right {
     -webkit-box-flex: 1;
