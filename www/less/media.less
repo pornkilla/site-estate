@@ -49,7 +49,7 @@
         }
     }
 
-    .realty {
+    .realty {        
         &.grid {
             .pic {
                 max-height: 240px;
@@ -433,7 +433,7 @@
         .flex-direction(row);
     }
 
-    .realty {
+    .realty {        
         &.grid {
             .pic {
                 img {
@@ -459,24 +459,33 @@
     .innerpage {
         .wrapper {
             .align-items(flex-start);           
-        }
-
-        .sidebar {
-            .order(1);
-            margin-top: 0;
-        }
+        }        
 
         .search-panel {
             width: 320px;
         }
 
+        .sidebar {            
+            margin-top: 0;
+            margin-left: 20px;
+        }
+
         .content-column {
             .flex(1);
-            .order(2);
-            margin-left: 20px;
             text-align: left;
         }
-    }
+        .swapped {
+            .sidebar {
+                .order(1);
+                margin-left: 0;
+            }
+
+            .content-column {
+                .order(2);
+                    margin-left: 20px;
+            }
+        }
+    }    
 
     .filter-panel {
         .filters {
@@ -486,6 +495,22 @@
             }
         }
     }
+
+    .catalog-details {
+        .details {
+            .wrapper {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+        .gallery {
+            max-width: 90%;            
+        }
+        .gallery, .object-specs {
+            margin-top: 50px;    
+        }
+    }
+
     .support-white {
         background-size: auto 350px;
         padding-bottom: 75px;
@@ -608,7 +633,7 @@
             }
         }
 
-        &.list {
+        &.list:not(.aside) {
             .segment {
                 max-height: 320px;
                 padding: 0;
@@ -788,7 +813,7 @@
     }
 
     .realty {
-        &.list {
+        &.list:not(.aside) {
             .info-box {
                 p {                    
                     margin-bottom: 1em;
