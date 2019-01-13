@@ -96,8 +96,8 @@
 //*** Screen 768+
 @media (min-width: 48em) {
     .toolbar {
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     header {
@@ -198,13 +198,16 @@
             }
         }
 
-        .head-main {
-            height: 100px;
+        .head-main {            
             padding-left: 10px;
             padding-right: 10px;
             line-height: 1.4;
-            padding-bottom: 10px;
+            // padding-bottom: 10px;
             .align-items(flex-end);
+
+            .wrapper {
+                height: 100px;
+            }
 
             .phones,
             .adress {
@@ -455,7 +458,7 @@
 
     .innerpage {
         .wrapper {
-            .align-items(flex-start);
+            .align-items(flex-start);           
         }
 
         .sidebar {
@@ -475,6 +478,14 @@
         }
     }
 
+    .filter-panel {
+        .filters {
+            label {
+                padding-left: 45px;
+                padding-right: 45px;
+            }
+        }
+    }
     .support-white {
         background-size: auto 350px;
         padding-bottom: 75px;
@@ -673,12 +684,7 @@
 
         .head-nav,
         .head-submenu .wrapper {
-            max-width: 80%;
-        }
-
-        .head-main {
-            padding-left: 10%;
-            padding-right: 10%;
+            .size-limiter;
         }
 
         .head-submenu {
@@ -749,15 +755,20 @@
         }
     }
 
-    .toolbar {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
     .main-offers {
         .wrapper {
             padding-left: 0;
             padding-right: 0;
+        }
+    }
+
+    .page {
+        .page-header, 
+        .innerpage {
+            .wrapper {
+                padding-left: 0;
+                padding-right: 0;
+            }
         }
     }
 

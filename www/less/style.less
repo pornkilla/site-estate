@@ -503,8 +503,13 @@ header {
     }
 
     .head-main {
-        color: @hose;
-        height: 120px;
+        color: @hose;        
+
+        .wrapper {
+            height: 120px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
 
         .phones,
         .adress {
@@ -1360,6 +1365,7 @@ footer {
     .buttons-panel {
         border-left: @hose 1px solid;
         padding-left: 1.5em;
+        text-align: right;
             button {
                 font-size: inherit;
                 font-weight: 600;
@@ -1376,8 +1382,8 @@ footer {
         .flexy;
         .v-centered;
         label {
-            padding-left: 45px;
-            padding-right: 45px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
         .flex(1);
         
@@ -1390,8 +1396,14 @@ footer {
 }
 
 .toolbar {
+
+    .wrapper {
+        padding: 0 10px;
+        text-align: left;
+    }
+
     .breadcrumb {
-        padding: 10px 0;
+        padding: 5px 0;
 
         &>* {
             line-height: 1.47;
@@ -1700,9 +1712,8 @@ footer {
     }
 }
 
-.innerpage {}
-
 .page {
+    
     .page-header {
         h2 {
             margin-bottom: 1.5em;
@@ -1711,7 +1722,7 @@ footer {
 
     .sidebar {
         margin-top: 2em;
-    }
+    }    
 }
 
 .catalog-list {

@@ -2663,7 +2663,11 @@ header .head-top .social-icons .avito {
 }
 header .head-main {
   color: #b9baa3;
+}
+header .head-main .wrapper {
   height: 120px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 header .head-main .phones,
 header .head-main .adress {
@@ -3458,6 +3462,7 @@ footer .copy p {
 .filter-panel .buttons-panel {
   border-left: #b9baa3 1px solid;
   padding-left: 1.5em;
+  text-align: right;
 }
 .filter-panel .buttons-panel button {
   font-size: inherit;
@@ -3487,16 +3492,20 @@ footer .copy p {
   flex: 1;
 }
 .filter-panel .filters label {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .filter-panel .filters .fa {
   margin-left: 5px;
   font-size: 0.75rem;
   color: #be1d2d;
 }
+.toolbar .wrapper {
+  padding: 0 10px;
+  text-align: left;
+}
 .toolbar .breadcrumb {
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .toolbar .breadcrumb > * {
   line-height: 1.47;
@@ -3869,8 +3878,8 @@ footer .copy p {
 }
 @media (min-width: 48em) {
   .toolbar {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   header .head-top {
     padding-left: 1rem;
@@ -3984,16 +3993,17 @@ footer .copy p {
     font-size: 1rem;
   }
   header .head-main {
-    height: 100px;
     padding-left: 10px;
     padding-right: 10px;
     line-height: 1.4;
-    padding-bottom: 10px;
     -webkit-box-align: end;
     -moz-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
+  }
+  header .head-main .wrapper {
+    height: 100px;
   }
   header .head-main .phones,
   header .head-main .adress {
@@ -4315,6 +4325,10 @@ footer .copy p {
     margin-left: 20px;
     text-align: left;
   }
+  .filter-panel .filters label {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
   .support-white {
     background-size: auto 350px;
     padding-bottom: 75px;
@@ -4517,11 +4531,7 @@ footer .copy p {
 @media (min-width: 80em) {
   header .head-nav,
   header .head-submenu .wrapper {
-    max-width: 80%;
-  }
-  header .head-main {
-    padding-left: 10%;
-    padding-right: 10%;
+    max-width: 1170px;
   }
   header .head-submenu .wrapper {
     padding-left: 0;
@@ -4562,11 +4572,12 @@ footer .copy p {
   section .wrapper {
     max-width: 1170px;
   }
-  .toolbar {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
   .main-offers .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .page .page-header .wrapper,
+  .page .innerpage .wrapper {
     padding-left: 0;
     padding-right: 0;
   }
