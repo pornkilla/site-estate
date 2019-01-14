@@ -33,7 +33,7 @@
 					</button>
 				</div>
 				<div class="call">
-					<button type="button">заказать звонок</button>
+					<button type="button" class="call-the-call">заказать звонок</button>
 				</div>
 				<div class="social-icons">
 					<a href="#" class="fa fa-vk social-link" data-content="Мы в Контакте"></a>
@@ -1264,6 +1264,35 @@
 	</footer>
 
 	<div id="scroll-to-top"><i class="fa fa-arrow-circle-up"></i></div>
+
+	<div class="ui tiny modal call-back">
+		<i class="close icon"></i>
+		<div class="header">
+			Закажите обратный звонок
+		</div>
+		<div class="content">
+			<form>
+				<div class="ui form">
+					<div class="size-small">
+						<div class="required field">
+							<label>Ваше имя</label>
+							<input placeholder="Обязательно для заполнения" type="text" required>
+						</div>
+
+						<div class="required field">
+							<label>Телефон</label>
+							<input placeholder="Обязательно для заполнения" type="text" required>
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+		<div class="actions flexy full-centered">
+			<button type="button" class="ui centered bg-red wide">Отправить</button>
+		</div>
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	 crossorigin="anonymous"></script>

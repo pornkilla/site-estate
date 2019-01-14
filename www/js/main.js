@@ -307,6 +307,12 @@
         });
         popupHint.popup();
 
+        // Modal window
+        $('.call-the-call').on('click', function () { 
+            $('.call-back').modal('show');
+        });
+        
+
         // Glider slider
         $('.slider').glide({
             autoplay: false,
