@@ -1,30 +1,30 @@
 (function ($) {
-	"use strict";
+    "use strict";
 
-	jQuery(document).ready(function($){
-        var 
-        mobileToggler = $('#mobile-toggle'),
-        menuBox = $('#menu-main'),
-        realtyMenuItem = $('.head-search .selector .items li'),
-        realtyMenuItemHint = $('.head-search .selector .icon'),
-        sorterButton = $('.filter-panel .toggler'),
-        logoHint = $('.logo'),
-        popupHint = $('.hint'),
-        partnersLogo = $('.partner'),
-        socialIcons = $('.social-link'),
-        scrollMeTop = $('#scroll-to-top');
+    jQuery(document).ready(function ($) {
+        var
+            mobileToggler = $('#mobile-toggle'),
+            menuBox = $('#menu-main'),
+            realtyMenuItem = $('.head-search .selector .items li'),
+            realtyMenuItemHint = $('.head-search .selector .icon'),
+            sorterButton = $('.filter-panel .toggler'),
+            logoHint = $('.logo'),
+            popupHint = $('.hint'),
+            partnersLogo = $('.partner'),
+            socialIcons = $('.social-link'),
+            scrollMeTop = $('#scroll-to-top');
 
         function mobileMenuInAction() {
-			$('body').toggleClass('menu-open');
-			menuBox.slideToggle('slow', 'swing');
+            $('body').toggleClass('menu-open');
+            menuBox.slideToggle('slow', 'swing');
         }
-        
+
         // Search selectors change
         function redrawForms() {
             $('.head-search form').hide('fast');
             var realtyMenuItemActive = $('.head-search .items li.active'),
-            formTarget = realtyMenuItemActive.data('target'),
-            setFormVisible = $('#form-' + formTarget);
+                formTarget = realtyMenuItemActive.data('target'),
+                setFormVisible = $('#form-' + formTarget);
             setFormVisible.fadeIn('fast');
         };
 
@@ -36,10 +36,10 @@
 
         sorterButton.on('click', function () {
             $(this).find('.fa').toggleClass('fa-arrow-down fa-arrow-up');
-        });            
-        realtyMenuItem.on('click', function () {            
+        });
+        realtyMenuItem.on('click', function () {
             if ($(this).hasClass('active') == true) {
-               return;
+                return;
             } else {
                 realtyMenuItem.removeClass('active');
                 $(this).addClass('active');
@@ -58,12 +58,12 @@
 
         // Resize cleanup
         $(window).on('resize', function () {
-			menuBox.removeAttr('style');
-			$('.dropdown').removeAttr('style');
-			$('body').removeClass('menu-open');
-			mobileToggler.data('clicked', false);		
-			
-		});
+            menuBox.removeAttr('style');
+            $('.dropdown').removeAttr('style');
+            $('body').removeClass('menu-open');
+            mobileToggler.data('clicked', false);
+
+        });
 
         // Header mobile menu switcher
         mobileToggler.on('click', function () {
@@ -83,10 +83,10 @@
 
         // Move to top by clicking sticky footer button
         scrollMeTop.on('click', function () {
-        $('html, body').animate({
-             'scrollTop': 0 
+            $('html, body').animate({
+                'scrollTop': 0
             }, 1000, 'swing');
-        });       
+        });
 
         // Semantic UI Range
         $('#ranger-flats').range({
@@ -96,11 +96,11 @@
             step: 0.1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-flats').val(secVal);
                 $('#range-max-flats').val(firstVal);
             }
@@ -128,11 +128,11 @@
             step: 0.1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-resale').val(secVal);
                 $('#range-max-resale').val(firstVal);
             }
@@ -144,11 +144,11 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-resale-meters').val(secVal);
                 $('#range-max-resale-meters').val(firstVal);
             }
@@ -160,11 +160,11 @@
             step: 0.1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-country').val(secVal);
                 $('#range-max-country').val(firstVal);
             }
@@ -176,11 +176,11 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-exclusive').val(secVal);
                 $('#range-max-exclusive').val(firstVal);
             }
@@ -192,11 +192,11 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-exclusive-meters').val(secVal);
                 $('#range-max-exclusive-meters').val(firstVal);
             }
@@ -208,11 +208,11 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-commerce').val(secVal);
                 $('#range-max-commerce').val(firstVal);
             }
@@ -224,11 +224,11 @@
             step: 10,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-commerce-meters').val(secVal);
                 $('#range-max-commerce-meters').val(firstVal);
             }
@@ -240,11 +240,11 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-rent').val(secVal);
                 $('#range-max-rent').val(firstVal);
             }
@@ -256,11 +256,11 @@
             step: 0.1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-land').val(secVal);
                 $('#range-max-land').val(firstVal);
             }
@@ -272,47 +272,47 @@
             step: 1,
             verbose: true,
             debug: true,
-            onChange: function(value) {
-              var
-                $self = $(this),
-                firstVal = $self.range('get thumb value'),
-                secVal = $self.range('get thumb value', 'second');                 
+            onChange: function (value) {
+                var
+                    $self = $(this),
+                    firstVal = $self.range('get thumb value'),
+                    secVal = $self.range('get thumb value', 'second');
                 $('#range-min-land-meters').val(secVal);
                 $('#range-max-land-meters').val(firstVal);
             }
         });
 
         // Dropdowns
-        $('.ui.dropdown').dropdown();        
+        $('.ui.dropdown').dropdown();
 
         // Tooltips
         realtyMenuItemHint.popup({
-            on         : 'hover',
-            inline     : false,
-            hoverable  : true,
-            position   : 'top center',
+            on: 'hover',
+            inline: false,
+            hoverable: true,
+            position: 'top center',
             delay: {
                 show: 500,
                 hide: 400
             }
-        }); 
+        });
         socialIcons.popup({
-            position   : 'bottom center'
+            position: 'bottom center'
         });
         partnersLogo.popup({
-            position   : 'top center'
+            position: 'top center'
         });
         logoHint.popup({
             position: 'bottom center'
         });
         popupHint.popup();
-        
+
         // Glider slider
         $('.slider').glide({
             autoplay: false,
             arrowsWrapperClass: 'slider-arrows',
             arrowRightText: '',
             arrowLeftText: ''
-          });
+        });
     });
 }(jQuery));

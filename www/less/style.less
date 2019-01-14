@@ -282,6 +282,12 @@ h3 {
     }
 }
 
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
 strong {
     font-weight: 600;
 }
@@ -404,7 +410,6 @@ sup {
     vertical-align: super;
     font-size: 0.5em;
 }
-
 .page {
     .wrapper {
         padding-top: 3rem;
@@ -416,6 +421,32 @@ sup {
     h2:not(.liner) {
         margin-bottom: 1.1em;
         text-transform: uppercase;
+    }
+    .bg-white {
+        .ui.form {
+            input[type="text"], textarea, .selection {
+                background-color: @smoky;
+                &::placeholder, .default.text {
+                    color: @hose-shade-dark;
+                }
+            }
+            .default.text {
+                color: @hose-shade-dark;
+            }
+        }
+    }
+    .page-header {
+        h2 {
+            margin-bottom: 1.5em;
+        }
+    }
+    .sidebar {
+        margin-top: 2em;
+        .aside {
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
@@ -1534,22 +1565,6 @@ footer {
     }
 }
 
-.page {
-    .page-header {
-        h2 {
-            margin-bottom: 1.5em;
-        }
-    }
-    .sidebar {
-        margin-top: 2em;
-        .aside {
-            max-width: 320px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    }
-}
-
 .catalog-list {
     .search-panel {
         padding: 2em 20px;
@@ -1706,7 +1721,21 @@ footer {
         }
     }
 }
-
+.article {
+    .article-header {
+        margin-bottom: 40px;
+    }
+    .columned {
+        .flex-col;
+    }
+}
+.service {
+    .submit {
+        label {
+            text-align: left;
+        }
+    }
+}
 .contacts {
     .page-header {
         h2 {
@@ -1765,23 +1794,8 @@ footer {
         .grow-up {
             p {
                 font-size: 0.75rem;
-            }
-            .align-items(stretch);
-            &, & > .segment {
-                .flex(1);
-                .display(flex);                
-                .justify-content(center);
-            }
-            .segment {
-                .align-items(center);
-            }
-        }
-        input[type="text"], textarea {
-            background-color: @smoky;
-            &::placeholder {
-                color: @hose-shade-dark;
-            }
-        }
+            }        
+        }        
     }
     .social {
         .bubbles {
