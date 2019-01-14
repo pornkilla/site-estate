@@ -3957,8 +3957,8 @@ footer .copy p {
 .promo.spb {
   width: 100%;
   height: 480px;
-  background-image: url('../images/pic_spb-small.png'), url('../images/bg_spb-small.jpg');
-  background-position: 70px 100px, -181px center;
+  background-image: url('../images/pic_spb-small-w.png'), url('../images/bg_spb-small.jpg');
+  background-position: 110px 50px, -181px center;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, auto 100%;
 }
@@ -4040,6 +4040,11 @@ footer .copy p {
   .realty.grid .pic.empty {
     height: 210px;
   }
+  .promo.spb {
+    height: 400px;
+    background-position: 190px 10px, -90px center;
+    background-size: 80% auto, auto 100%;
+  }
 }
 @media (min-width: 36em) {
   header .head-teaser .pic {
@@ -4086,6 +4091,12 @@ footer .copy p {
   .support-white.alt .shifter {
     margin-right: auto;
     margin-left: 5%;
+  }
+  .promo.spb {
+    height: 320px;
+    background-image: url(../images/pic_spb-small-w.png), url(../images/bg_spb.jpg);
+    background-position: right 20px, -100px top;
+    background-size: 60% auto, auto 100%;
   }
 }
 @media (min-width: 48em) {
@@ -4598,6 +4609,12 @@ footer .copy p {
   .catalog-details .object-specs .info-box p {
     margin-bottom: 5px;
   }
+  .promo.spb {
+    height: 320px;
+    background-image: url(../images/pic_spb.png), url(../images/bg_spb.jpg);
+    background-position: right 25%, -100px top;
+    background-size: 75% auto, auto 100%;
+  }
   .support-white {
     background-size: auto 350px;
     padding-bottom: 75px;
@@ -4812,6 +4829,11 @@ footer .copy p {
   .support-white.alt {
     background-position: 67% bottom, center center;
   }
+  .promo.spb {
+    height: 320px;
+    background-position: right 25%, -100px bottom;
+    background-size: 75% auto, 120% auto;
+  }
   footer .right {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -4900,6 +4922,11 @@ footer .copy p {
   }
   .realty.list:not(.aside) .price {
     min-height: 50px;
+  }
+  .promo.spb {
+    height: 400px;
+    background-position: right 15%, left bottom;
+    background-size: 50% auto, 100% auto;
   }
   .support-white {
     background-position-x: 24%;
