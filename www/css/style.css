@@ -3951,6 +3951,141 @@ footer .copy p {
   background: url(../images/logo_sber.png) center 8% no-repeat;
   background-size: 50px;
 }
+.contacts .page-header h2 {
+  margin-bottom: 0;
+}
+.contacts .map {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.contacts .map .wrapper {
+  padding: 0;
+}
+.contacts .sidebar h3 {
+  color: #2b303a;
+}
+.contacts .contact-points {
+  margin-bottom: 40px;
+}
+.contacts .contact-points .item {
+  margin-top: 10px;
+  padding-bottom: 40px;
+}
+.contacts .contact-points .item p {
+  font-size: 0.875rem;
+  line-height: 1.47;
+  margin-bottom: 5px;
+}
+.contacts .contact-points .item p.huge {
+  font-size: 1.125rem;
+}
+.contacts .contact-points .item p.small {
+  font-size: 0.75rem;
+}
+.contacts .contact-points .item p.strong {
+  font-weight: 600;
+}
+.contacts .contact-points .icon {
+  margin-bottom: 20px;
+  width: 75px;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  background-color: #f0f0ec;
+  color: #b9baa3;
+  line-height: 72px;
+  font-size: 2.25rem;
+  text-align: center;
+}
+.contacts .messager label {
+  text-align: left;
+}
+.contacts .messager .grow-up {
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.contacts .messager .grow-up p {
+  font-size: 0.75rem;
+}
+.contacts .messager .grow-up,
+.contacts .messager .grow-up > .segment {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.contacts .messager .grow-up .segment {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contacts .messager input[type="text"],
+.contacts .messager textarea {
+  background-color: #f0f0ec;
+}
+.contacts .messager input[type="text"]::placeholder,
+.contacts .messager textarea::placeholder {
+  color: #8e8f7d;
+}
+.contacts .social .bubbles {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 780px;
+  overflow: hidden;
+}
+.contacts .social .bubbles .circle {
+  margin: 20px;
+  -webkit-border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 50%;
+  -moz-background-clip: padding;
+  border-radius: 50%;
+  background-clip: padding-box;
+  width: 120px;
+  height: 120px;
+  background-position: 50% 50%;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-size: 64px 64px;
+  border: #f0f0ec 10px solid;
+  transition: width 0.2s ease, height 0.2s ease, border-width 0.2s ease;
+}
+.contacts .social .bubbles .circle:hover {
+  width: 124px;
+  height: 124px;
+  border-width: 4px;
+}
+.contacts .social .bubbles .vk {
+  background-image: url('../images/logo-vk.svg');
+}
+.contacts .social .bubbles .insta {
+  background-image: url('../images/logo-insta.svg');
+}
+.contacts .social .bubbles .avito {
+  background-image: url('../images/logo-avito.svg');
+}
 .promo {
   position: relative;
 }
@@ -4530,6 +4665,9 @@ footer .copy p {
     margin-top: 0;
     margin-left: 20px;
   }
+  .innerpage .sidebar.double {
+    width: 360px;
+  }
   .innerpage .content-column {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -4609,6 +4747,49 @@ footer .copy p {
   .catalog-details .object-specs .info-box p {
     margin-bottom: 5px;
   }
+  .contacts .sidebar {
+    margin-right: 20px;
+  }
+  .contacts .sidebar h3 {
+    text-align: left;
+  }
+  .contacts .contact-points .item {
+    padding-bottom: 20px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .contacts .contact-points .icon {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+  .contacts .contact-points .side {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+  .contacts .contact-points .side p {
+    text-align: left;
+  }
+  .contacts .messager .ui.form .fields {
+    display: block;
+  }
+  .contacts .messager .ui.form .two.fields > .field {
+    width: 100% !important;
+    margin-bottom: 2em;
+  }
+  .contacts .social .bubbles {
+    height: 200px;
+  }
   .promo.spb {
     height: 320px;
     background-image: url(../images/pic_spb.png), url(../images/bg_spb.jpg);
@@ -4656,6 +4837,9 @@ footer .copy p {
   }
   header .head-main .wrapper {
     max-width: 1210px;
+  }
+  header .head-blank {
+    height: 60px;
   }
   header .head-submenu .wrapper {
     padding: 90px 10px 20px 40px;
@@ -4900,6 +5084,9 @@ footer .copy p {
     padding-left: 0;
     padding-right: 0;
   }
+  .innerpage .sidebar.double {
+    width: 360px;
+  }
   .page .page-header .wrapper,
   .page .innerpage .wrapper {
     padding-left: 0;
@@ -4923,10 +5110,20 @@ footer .copy p {
   .realty.list:not(.aside) .price {
     min-height: 50px;
   }
+  .contacts .messager .ui.form .fields {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contacts .messager .ui.form .two.fields > .field {
+    width: auto;
+  }
   .promo.spb {
     height: 400px;
-    background-position: right 15%, left bottom;
-    background-size: 50% auto, 100% auto;
+    background-position: right 25%, left bottom;
+    background-size: auto 130px, 100% auto;
   }
   .support-white {
     background-position-x: 24%;

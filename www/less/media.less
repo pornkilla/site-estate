@@ -412,6 +412,9 @@
         .sidebar {
             margin-top: 0;
             margin-left: 20px;
+            &.double {
+                width: 360px;
+            }
         }
         .content-column {
             .flex(1);
@@ -497,6 +500,46 @@
             }
         }
     }
+    .contacts {
+        .sidebar {
+            margin-right: 20px;
+            h3 {
+                text-align: left;
+            }
+        }
+        .contact-points {
+            .item {
+                padding-bottom: 20px;
+                .flexy;
+                .align-items(center);
+            }
+            .icon {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+            .side {
+                .flex(1);
+                p {
+                    text-align: left;
+                }
+            }
+        }
+        .messager {
+            .ui.form .fields {
+                display: block;
+            }
+           .ui.form .two.fields > .field {
+               width: 100% !important;
+               margin-bottom: 2em;
+           }
+        
+        }
+        .social {
+            .bubbles {
+                height: 200px;
+            }
+        }
+    }
     .promo {
         &.spb {
             height: 320px;
@@ -551,6 +594,9 @@
             .wrapper {
                 max-width: 1210px;
             }
+        }
+        .head-blank {
+            height: 60px;
         }
         .head-submenu {
             .wrapper {
@@ -780,6 +826,13 @@
             padding-right: 0;
         }
     }
+    .innerpage {
+        .sidebar {
+            &.double {
+                width: 360px;
+            }
+        }
+    }
     .page {
         .page-header,
         .innerpage {
@@ -819,11 +872,21 @@
             }
         }
     }
+    .contacts {        
+        .messager {
+            .ui.form .fields {
+                .display(flex);
+            }
+           .ui.form .two.fields > .field {
+               width: auto;               
+           }
+        }
+    }
     .promo {
         &.spb {
             height: 400px;
-            background-position: right 15%, left bottom;
-            background-size: 50% auto, 100% auto;
+            background-position: right 25%, left bottom;
+            background-size: auto 130px, 100% auto;
         }
     }
     .support-white {
