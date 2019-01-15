@@ -453,7 +453,7 @@
             .inner-nav {
                 text-align: left;
                 position: relative;
-                padding-left: 80px;
+                padding-left: 90px;
                 h3 {
                     margin-top: 0;
                 }
@@ -465,10 +465,9 @@
                         margin-right: 5px;
                     }
                 }
-                .button {
-                    position: absolute;
+                .button {                    
                     left: 0;
-                    top: 0;
+                    top: 0;                    
                 }
             }
         }
@@ -513,6 +512,27 @@
             .flex-row;
             .text {
                 width: 50%;
+            }
+        }
+    }
+    .about-us {
+        .intro {
+            .signature {
+                padding-left: 50px;
+                padding-right: 50px;
+                .flex-row;
+                .sign {
+                    .order(2);
+                }
+                .position {                     
+                    .order(1);
+                }
+                .name {
+                    .order(3);
+                }
+                .position, .name {
+                    margin: 0 auto;
+                }
             }
         }
     }
@@ -954,5 +974,13 @@
                 }
             }
         }
+    }
+    .catalog-details {
+        .page-header {
+            h2 {
+                padding-left: 70px;
+                padding-right: 70px
+            }
+        }        
     }
 }
