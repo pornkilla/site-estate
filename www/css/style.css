@@ -3997,6 +3997,40 @@ footer .copy p {
 .service .submit label {
   text-align: left;
 }
+.members .person {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.members .person .pic img {
+  width: 150px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.members .person h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.members .person figcaption {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.members .person figcaption p {
+  font-size: 0.875rem;
+  font-weight: 200;
+}
+.members .person .phone a,
+.members .person .email a {
+  color: #2b303a;
+}
+.members .person .phone {
+  margin-bottom: 10px;
+  margin-right: 0;
+}
+.members .person .email {
+  font-size: 0.75rem;
+}
 .contacts .page-header h2 {
   margin-bottom: 0;
 }

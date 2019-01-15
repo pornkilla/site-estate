@@ -410,13 +410,15 @@ sup {
     vertical-align: super;
     font-size: 0.5em;
 }
-.modal {    
+
+.modal {
     .size-small {
         margin-left: auto;
         margin-right: auto;
         max-width: 320px;
     }
 }
+
 .page {
     .wrapper {
         padding-top: 3rem;
@@ -431,9 +433,12 @@ sup {
     }
     .bg-white {
         .ui.form {
-            input[type="text"], textarea, .selection {
+            input[type="text"],
+            textarea,
+            .selection {
                 background-color: @smoky;
-                &::placeholder, .default.text {
+                &::placeholder,
+                .default.text {
                     color: @hose-shade-dark;
                 }
             }
@@ -1728,6 +1733,7 @@ footer {
         }
     }
 }
+
 .article {
     .article-header {
         margin-bottom: 40px;
@@ -1736,6 +1742,7 @@ footer {
         .flex-col;
     }
 }
+
 .service {
     .submit {
         label {
@@ -1743,6 +1750,49 @@ footer {
         }
     }
 }
+
+.members {
+    .person {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        
+        .pic {
+            img {
+                .size(150px,
+                150px);
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        figcaption {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            p {
+                font-size: 0.875rem;
+                font-weight: 200;
+            }
+        }
+        .phone,
+        .email {
+            a {
+                color: @gunmetal;
+            }
+        }
+        .phone {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+        .email {
+            font-size: 0.75rem;
+        }
+    }
+}
+
 .contacts {
     .page-header {
         h2 {
@@ -1783,7 +1833,8 @@ footer {
         }
         .icon {
             margin-bottom: 20px;
-            .size(75px,75px);
+            .size(75px,
+            75px);
             margin-left: auto;
             margin-right: auto;
             .border-radius(50%);
@@ -1801,19 +1852,20 @@ footer {
         .grow-up {
             p {
                 font-size: 0.75rem;
-            }        
-        }        
+            }
+        }
     }
     .social {
         .bubbles {
             margin-left: auto;
             margin-right: auto;
-            max-width: 780px;            
+            max-width: 780px;
             overflow: hidden;
             .circle {
-                margin: 20px;                
+                margin: 20px;
                 .border-radius(50%);
-                .size(120px,120px);
+                .size(120px,
+                120px);
                 background-position: 50% 50%;
                 background-color: #ffffff;
                 background-repeat: no-repeat;
@@ -1821,9 +1873,9 @@ footer {
                 border: @smoky 10px solid;
                 transition: width 0.2s ease, height 0.2s ease, border-width 0.2s ease;
                 &:hover {
-                    .size(124px,124px);
+                    .size(124px,
+                    124px);
                     border-width: 4px;
-
                 }
             }
             .vk {
