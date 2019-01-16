@@ -1770,7 +1770,8 @@ footer {
     }
     .list {
         text-align: left;
-        li, .item {
+        li,
+        .item {
             margin-bottom: 10px;
             line-height: 1.47;
         }
@@ -2075,6 +2076,23 @@ footer {
         max-width: 280px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+// Animated caller button
+#request-a-call {
+    .size(100);
+    right: 15px;
+    bottom: 20px;
+    z-index: 9999;
+    position: fixed;
+    transform: scale(0.85);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    -webkit-filter: drop-shadow( 0 5px 4px rgba(0, 0, 0, .3));
+    filter: drop-shadow( 0 5px 4px rgba(0, 0, 0, .3));
+    &:hover {
+        transform: scale(1.2);
     }
 }
 

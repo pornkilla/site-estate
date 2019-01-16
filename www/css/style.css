@@ -4328,6 +4328,22 @@ footer .copy p {
   margin-left: auto;
   margin-right: auto;
 }
+#request-a-call {
+  width: 100px;
+  height: 100px;
+  right: 15px;
+  bottom: 20px;
+  z-index: 9999;
+  position: fixed;
+  transform: scale(0.85);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  -webkit-filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.3));
+}
+#request-a-call:hover {
+  transform: scale(1.2);
+}
 #scroll-to-top {
   width: 40px;
   height: 40px;
