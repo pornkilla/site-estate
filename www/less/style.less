@@ -28,6 +28,9 @@ sans-serif;
 .bg-red {
     color: #ffffff;
     background-color: @red;
+    a&:hover {
+        color: @yellow;
+    }
 }
 
 .bg-yellow {
@@ -67,6 +70,10 @@ sans-serif;
 .bg-hose {
     color: #ffffff;
     background-color: @hose;
+    a&:hover {
+        color: @yellow;
+        background-color: @hose-shade-dark;
+    }
 }
 
 .bg-smoky {
@@ -1251,6 +1258,11 @@ footer {
             }
         }
     }
+    &.modal {
+        .header {
+            text-align: center;
+        }
+    }
 }
 
 .filter-panel {
@@ -1351,6 +1363,9 @@ footer {
 }
 
 .realty {
+    a {
+        color: inherit;
+    }
     h3 {
         font-weight: 400;
         font-size: 1rem;
@@ -1364,6 +1379,7 @@ footer {
         z-index: 2;
         bottom: 10px;
         right: 10px;
+        cursor: pointer;
         font-family: @font-roboto;
         padding: 0.5rem 0.65rem;
         font-size: 0.75rem;
