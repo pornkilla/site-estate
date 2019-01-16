@@ -3449,6 +3449,9 @@ footer .copy p {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+.ui.table thead th {
+  background-color: #f0f0ec;
+}
 .ui.popup {
   text-align: center;
   font-size: 0.875rem;
@@ -3853,10 +3856,13 @@ footer .copy p {
   margin-top: 2em;
   margin-bottom: 2em;
 }
-.gallery .accent {
+.page .image-gallery .pagination {
+  margin-top: 2em;
+}
+.mini-gallery .accent {
   position: relative;
 }
-.gallery .navi-arrows .arrow {
+.mini-gallery .navi-arrows .arrow {
   font-size: 2rem;
   color: #8e8f7d;
   position: absolute;
@@ -3867,13 +3873,13 @@ footer .copy p {
   top: 50%;
   transform: translateY(-50%);
 }
-.gallery .navi-arrows .arrow.left {
+.mini-gallery .navi-arrows .arrow.left {
   left: 0;
 }
-.gallery .navi-arrows .arrow.right {
+.mini-gallery .navi-arrows .arrow.right {
   right: 0;
 }
-.gallery .images {
+.mini-gallery .images {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -3889,20 +3895,20 @@ footer .copy p {
   align-items: center;
   margin: 10px 0;
 }
-.gallery .images .active {
+.mini-gallery .images .active {
   border: #00a8ff 2px solid;
 }
-.gallery .images img {
+.mini-gallery .images img {
   margin: 0;
 }
-.gallery .images a {
+.mini-gallery .images a {
   margin: 0 10px 10px 0;
 }
-.gallery .slider-arrow {
+.mini-gallery .slider-arrow {
   opacity: 0.8;
   z-index: 3;
 }
-.gallery .slider-arrow::before {
+.mini-gallery .slider-arrow::before {
   content: '';
   display: block;
   position: absolute;
@@ -3987,6 +3993,9 @@ footer .copy p {
   background: url(../images/logo_sber.png) center 8% no-repeat;
   background-size: 50px;
 }
+.article h3 {
+  margin-bottom: 1.5em;
+}
 .article .article-header {
   margin-bottom: 40px;
 }
@@ -4003,6 +4012,36 @@ footer .copy p {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+.article .section {
+  margin-top: 2em;
+}
+.article .list {
+  text-align: left;
+}
+.article .list li,
+.article .list .item {
+  margin-bottom: 10px;
+  line-height: 1.47;
+}
+.article .list .item .fa {
+  margin-right: 8px;
+  color: #be1d2d;
+}
+.files.list {
+  text-align: left;
+}
+.files.list .name {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.files.list .size {
+  color: #b9baa3;
+  font-size: 0.75rem;
+}
+.service .submit .size-limiter {
+  max-width: 640px;
 }
 .service .submit label {
   text-align: left;
@@ -4817,7 +4856,7 @@ footer .copy p {
   }
   .innerpage .sidebar {
     margin-top: 0;
-    margin-left: 20px;
+    margin-left: 2em;
   }
   .innerpage .sidebar.double {
     width: 360px;
@@ -4886,7 +4925,7 @@ footer .copy p {
   .catalog-details .details .sidebar {
     margin-left: 50px;
   }
-  .catalog-details .gallery,
+  .catalog-details .mini-gallery,
   .catalog-details .object-specs {
     margin-top: 50px;
   }
@@ -4900,15 +4939,17 @@ footer .copy p {
   .catalog-details .object-specs .info-box p {
     margin-bottom: 5px;
   }
-  .article .text {
-    padding-left: 20px;
-    padding-right: 20px;
+  .article .sidebar {
+    max-width: 320px;
   }
-  .article .text p {
+  .article.bg-white .wrapper {
+    padding: 4em;
+  }
+  .article.bg-white .text p {
     text-align: left;
     line-height: 1.47;
   }
-  .article .columned {
+  .article.bg-white .columned {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -4930,7 +4971,11 @@ footer .copy p {
     -ms-flex-align: center;
     align-items: center;
   }
-  .article .columned .text {
+  .article.bg-white .columned .text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .article.bg-white .columned .text {
     width: 50%;
   }
   .about-us .intro .signature {
@@ -5323,14 +5368,14 @@ footer .copy p {
     width: 360px;
   }
   .page .page-header .wrapper,
-  .page .innerpage .wrapper {
+  .page .innerpage:not(.atricle) .wrapper {
     padding-left: 0;
     padding-right: 0;
   }
   .catalog-details .page-header .developer {
     width: 270px;
   }
-  .catalog-details .details .gallery {
+  .catalog-details .details .mini-gallery {
     width: auto;
     margin-left: 50px;
     margin-right: 0;
@@ -5356,7 +5401,7 @@ footer .copy p {
     width: auto;
   }
   .promo.spb {
-    height: 400px;
+    height: 360px;
     background-position: right 25%, left bottom;
     background-size: auto 130px, 100% auto;
   }
