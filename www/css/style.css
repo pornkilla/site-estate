@@ -4344,6 +4344,9 @@ footer .copy p {
 #request-a-call:hover {
   transform: scale(1.2);
 }
+.dimmed #request-a-call {
+  z-index: -1;
+}
 #scroll-to-top {
   width: 40px;
   height: 40px;

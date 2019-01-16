@@ -1312,46 +1312,7 @@
 	<script src="https://cdn.jsdelivr.net/jquery.glide/1.0.6/jquery.glide.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
 	<script src="js/vendor/semantic.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-		var circle1 = document.getElementById('circle1');
-		var circle2 = document.getElementById('circle2');
-		new TimelineMax({
-			repeat: -1
-		}).
-		fromTo(circle2, 1.0, {
-			autoAlpha: 1
-		}, {
-			autoAlpha: 0,
-			ease: Power0.easeOut
-		}, 0).
-		fromTo(circle2, 1.0, {
-			attr: {
-				r: 30
-			}
-		}, {
-			attr: {
-				r: 45
-			},
-			ease: Power1.easeOut
-		}, 0).
-		fromTo(circle1, 1.0, {
-			autoAlpha: 1
-		}, {
-			autoAlpha: 0,
-			ease: Power0.easeOut
-		}, 1).
-		fromTo(circle1, 1.0, {
-			attr: {
-				r: 30
-			}
-		}, {
-			attr: {
-				r: 45
-			},
-			ease: Power1.easeOut
-		}, 1);
-	</script>
+	<script src="js/main.js"></script>	
 </body>
 
 </html>

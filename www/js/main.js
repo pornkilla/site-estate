@@ -12,7 +12,45 @@
             popupHint = $('.hint'),
             partnersLogo = $('.partner'),
             socialIcons = $('.social-link'),
-            scrollMeTop = $('#scroll-to-top');
+            scrollMeTop = $('#scroll-to-top'),
+            circle1 = document.getElementById('circle1'),
+            circle2 = document.getElementById('circle2');
+
+        new TimelineMax({
+            repeat: -1
+        }).
+        fromTo(circle2, 1.0, {
+            autoAlpha: 1
+        }, {
+            autoAlpha: 0,
+            ease: Power0.easeOut
+        }, 0).
+        fromTo(circle2, 1.0, {
+            attr: {
+                r: 30
+            }
+        }, {
+            attr: {
+                r: 45
+            },
+            ease: Power1.easeOut
+        }, 0).
+        fromTo(circle1, 1.0, {
+            autoAlpha: 1
+        }, {
+            autoAlpha: 0,
+            ease: Power0.easeOut
+        }, 1).
+        fromTo(circle1, 1.0, {
+            attr: {
+                r: 30
+            }
+        }, {
+            attr: {
+                r: 45
+            },
+            ease: Power1.easeOut
+        }, 1);
 
         function mobileMenuInAction() {
             $('body').toggleClass('menu-open');
@@ -308,10 +346,10 @@
         popupHint.popup();
 
         // Modal window
-        $('.call-the-call').on('click', function () { 
+        $('.call-the-call').on('click', function () {
             $('.call-back').modal('show');
         });
-        
+
 
         // Glider slider
         $('.slider').glide({
