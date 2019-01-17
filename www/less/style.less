@@ -1198,6 +1198,14 @@ footer {
 }
 
 .ui {
+    &.modal>.close {
+        font-size: 2rem;
+        line-height: 1.5rem;
+        font-family: @font-roboto;
+        &::before {
+            content: '\00D7';
+        }
+    }
     &.table {
         thead {
             th {

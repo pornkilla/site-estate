@@ -3456,6 +3456,14 @@ footer .copy p {
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+.ui.modal > .close {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+.ui.modal > .close::before {
+  content: '\00D7';
+}
 .ui.table thead th {
   background-color: #f0f0ec;
 }
