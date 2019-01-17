@@ -3464,6 +3464,9 @@ footer .copy p {
 .ui.modal > .close::before {
   content: '\00D7';
 }
+.ui.modal button.wide {
+  margin-bottom: 1rem;
+}
 .ui.table thead th {
   background-color: #f0f0ec;
 }
