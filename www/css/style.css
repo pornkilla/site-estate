@@ -2599,6 +2599,41 @@ sup {
   margin-right: auto;
   max-width: 320px;
 }
+.fit {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.fit .message {
+  max-width: 480px;
+}
+.fit h1 {
+  font-size: 8rem;
+  color: #93a2ba;
+  font-family: "Appetite";
+}
+.fit h3 {
+  color: #93a2ba;
+}
 .page .wrapper {
   padding-top: 3rem;
   padding-bottom: 3rem;
