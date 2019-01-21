@@ -59,11 +59,15 @@
 
         // Search selectors change
         function redrawForms() {
-            $('.head-search form').hide('fast');
+        
             var realtyMenuItemActive = $('.head-search .items li.active'),
                 formTarget = realtyMenuItemActive.data('target'),
+                boxSelector = $('.head-search form'),
                 setFormVisible = $('#form-' + formTarget);
-            setFormVisible.fadeIn('fast');
+
+            boxSelector.addClass('hidden');
+            setFormVisible.toggleClass('hidden');
+
         };
 
         redrawForms();

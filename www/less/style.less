@@ -704,6 +704,11 @@ header {
         text-align: center;
         padding-top: 20px;
         padding-bottom: 20px;
+        &.hidden {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        transition: opacity 0.4s ease;
     }
     label {
         font-weight: 200;
