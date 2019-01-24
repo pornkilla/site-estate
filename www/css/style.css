@@ -3995,8 +3995,9 @@ footer .copy p {
   flex: 1;
 }
 .catalog-details .page-header .developer {
-  margin-top: 1rem;
+  margin-top: 1em;
   font-size: 0.75rem;
+  line-height: 1.2;
 }
 .catalog-details .page-header .developer strong {
   display: block;
@@ -4990,7 +4991,7 @@ footer .copy p {
     width: 250px;
     text-align: left;
     margin-top: 0;
-    padding-top: 12px;
+    padding-top: 10px;
   }
   .catalog-details .page-header .developer strong {
     padding-top: 1rem;
@@ -5005,6 +5006,7 @@ footer .copy p {
   }
   .catalog-details .page-header .inner-nav .object-location {
     margin-top: 10px;
+    padding-right: 2em;
   }
   .catalog-details .page-header .inner-nav .object-location .icon {
     display: inline-block;
