@@ -354,6 +354,13 @@
             $('.call-back').modal('show');
         });
 
+        // Dimmer        
+        $('#dimmed-message').on('click', function () {
+            $('.success-callback').dimmer('show');
+        });
+        $('.back-to-page').on('click', function () {
+            $('.success-callback').dimmer('hide');
+        });
 
         // Glider slider
         $('.slider').glide({

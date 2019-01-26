@@ -3507,6 +3507,16 @@ footer .copy p {
 .ui.modal button.wide {
   margin-bottom: 1rem;
 }
+.ui.dimmer .icon {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+}
+.ui.dimmer .footer {
+  max-width: 360px;
+  margin: 2em auto;
+}
 .ui.table thead th {
   background-color: #f0f0ec;
 }
