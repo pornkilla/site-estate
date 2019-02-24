@@ -5342,7 +5342,7 @@ footer .copy p {
   .realty.list:not(.aside) .pic img {
     min-width: auto;
     min-height: auto;
-    max-width: 450px;
+    max-width: 464px;
   }
   .realty.list:not(.aside) .pic.empty img {
     width: 100%;
