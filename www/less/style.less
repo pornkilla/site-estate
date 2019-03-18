@@ -1567,9 +1567,18 @@ footer {
     }
     &.list {
         margin-bottom: 2em;
-        .pic {
+        .pic {            
             &.empty {
                 min-height: 290px;
+            }
+            .bd {
+                display: block;
+                width: 100%;
+                min-height: 240px;
+                height: 100%;
+                background-position: right bottom;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
         .details {
@@ -1686,21 +1695,31 @@ footer {
         position: relative;
     }
     .navi-arrows {
-        .arrow {
-            font-size: 2rem;
-            color: @hose-shade-dark;
-            position: absolute;
-            display: block;
+        .arrow {           
             z-index: 3;
-            padding: 10px 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            top: 50%;
-            transform: translateY(-50%);
+            position: absolute;           
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            display: flex;
+            &::before {
+                font-size: 2rem;
+                color: @hose-shade-dark;
+                display: block;
+                padding: 10px 20px;
+                width: 50px;
+                margin-top: auto;
+                margin-bottom: auto;
+                height: 50px;
+                background-color: rgba(255, 255, 255, 0.8);
+            }
             &.left {
                 left: 0;
+                justify-content: flex-start;
             }
             &.right {
                 right: 0;
+                justify-content: flex-end;
             }
         }
     }
@@ -2183,5 +2202,64 @@ footer {
     }
 }
 
+#gallery-main-content {
+    display: flex;
+    align-items: center;
+    min-height: 250px;
+    background-color: @fog;
+    .image.fluid {        
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#catalog-gallery-wrap-items {
+    a {
+        width: 80px;
+        height: 50px;
+        display: block;        
+        overflow: hidden;
+    }
+}
+
 // Media queries
 @import "media";
+
+/****** Plahov *****/
+.imagePl {
+    cursor: pointer;
+}
+
+.popup_pl {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.popup_pl_bg {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 10000;
+    height: 100%;
+    width: 100%;
+}
+
+.popup_pl_img {
+    position: fixed;
+    z-index: 10001;
+    max-height: 94%;
+    max-width: 94%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}

@@ -3803,6 +3803,15 @@ footer .copy p {
 .realty.list .pic.empty {
   min-height: 290px;
 }
+.realty.list .pic .bd {
+  display: block;
+  width: 100%;
+  min-height: 240px;
+  height: 100%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .realty.list .details {
   text-align: left;
 }
@@ -3938,21 +3947,31 @@ footer .copy p {
   position: relative;
 }
 .mini-gallery .navi-arrows .arrow {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+}
+.mini-gallery .navi-arrows .arrow::before {
   font-size: 2rem;
   color: #8e8f7d;
-  position: absolute;
   display: block;
-  z-index: 3;
   padding: 10px 20px;
+  width: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.8);
-  top: 50%;
-  transform: translateY(-50%);
 }
 .mini-gallery .navi-arrows .arrow.left {
   left: 0;
+  justify-content: flex-start;
 }
 .mini-gallery .navi-arrows .arrow.right {
   right: 0;
+  justify-content: flex-end;
 }
 .mini-gallery .images {
   display: -webkit-box;
@@ -4447,6 +4466,26 @@ footer .copy p {
 #scroll-to-top:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+#gallery-main-content {
+  display: flex;
+  align-items: center;
+  min-height: 250px;
+  background-color: #bfc0c3;
+}
+#gallery-main-content .image.fluid {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#catalog-gallery-wrap-items a {
+  width: 80px;
+  height: 50px;
+  display: block;
+  overflow: hidden;
+}
 @media (min-width: 30em) {
   header .head-teaser {
     background-image: url('../images/bg_header-large.jpg');
@@ -4467,6 +4506,12 @@ footer .copy p {
     height: 400px;
     background-position: 190px 10px, -90px center;
     background-size: 80% auto, auto 100%;
+  }
+  #gallery-main-content {
+    min-height: 360px;
+  }
+  #gallery-main-content .image.fluid {
+    max-height: 360px;
   }
 }
 @media (min-width: 36em) {
@@ -5424,6 +5469,12 @@ footer .copy p {
     padding-left: 4%;
     padding-right: 4%;
   }
+  #gallery-main-content {
+    min-height: 480px;
+  }
+  #gallery-main-content .image.fluid {
+    max-height: 480px;
+  }
 }
 @media (min-width: 80em) {
   header .head-nav,
@@ -5535,6 +5586,12 @@ footer .copy p {
   .support-white.alt h2 {
     left: 16%;
   }
+  #gallery-main-content {
+    min-height: 600px;
+  }
+  #gallery-main-content .image.fluid {
+    max-height: 600px;
+  }
 }
 @media (min-width: 120em) {
   header .head-teaser .pic {
@@ -5562,4 +5619,35 @@ footer .copy p {
     padding-left: 70px;
     padding-right: 70px;
   }
+}
+/****** Plahov *****/
+.imagePl {
+  cursor: pointer;
+}
+.popup_pl {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center;
+}
+.popup_pl_bg {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+}
+.popup_pl_img {
+  position: fixed;
+  z-index: 10001;
+  max-height: 94%;
+  max-width: 94%;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
 }
